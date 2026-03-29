@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variation of Parameters - Differential Equations - MathLearn</title>
+    <title>Matrix Methods - Differential Equations - MathLearn</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
                     <a href="../index.html" class="breadcrumb-link">Differential Equations</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <span class="breadcrumb-current">Lesson 5: Variation of Parameters</span>
+                    <span class="breadcrumb-current">Lesson 2: Matrix Methods</span>
                 </li>
             </ol>
         </div>
@@ -42,10 +42,10 @@
 
     <main class="lesson-container">
         <div class="lesson-header">
-            <h1 class="lesson-title">Variation of Parameters</h1>
+            <h1 class="lesson-title">Matrix Methods</h1>
             <div class="lesson-meta">
-                <span>Chapter 2: Second-Order Linear Equations</span>
-                <span>Lesson 5 of 6</span>
+                <span>Chapter 3: Systems of Differential Equations</span>
+                <span>Lesson 2 of 5</span>
                 <span>⏱️ 40-50 minutes</span>
             </div>
         </div>
@@ -54,11 +54,11 @@
         <section class="lesson-section">
             <h2><span class="section-icon">🎯</span> Goal</h2>
             <div class="goal-box">
-                <p>Learn the variation of parameters method to find particular solutions to any non-homogeneous equation.</p>
+                <p>Learn how to solve systems of linear differential equations using matrix exponentials.</p>
             </div>
             
             <div class="one-sentence">
-                <strong>In one sentence:</strong> Variation of parameters finds a particular solution by replacing the constants in y_h with functions and solving for them.
+                <strong>In one sentence:</strong> The solution to dX/dt = AX is X = e^(At)X₀, where e^(At) is the matrix exponential.
             </div>
         </section>
 
@@ -67,44 +67,46 @@
             <h2><span class="section-icon">💡</span> The Idea</h2>
             
             <div class="content-block">
-                <h3>When to Use</h3>
-                <p>Use variation of parameters when:</p>
-                <ul>
-                    <li>f(t) is not a polynomial, exponential, or sine/cosine</li>
-                    <li>Undetermined coefficients doesn't work</li>
-                    <li>You need a more general method</li>
-                </ul>
-            </div>
-
-            <div class="content-block">
-                <h3>The Method</h3>
-                <p>Given y_h = C₁y₁ + C₂y₂, look for y_p = u₁y₁ + u₂y₂ where u₁ and u₂ are functions.</p>
+                <h3>Matrix Exponential</h3>
+                <p>For a constant matrix A, the matrix exponential is:</p>
                 
                 <div class="math-display">
-                    u₁' = -y₂f(t) / W(y₁, y₂)<br>
-                    u₂' = y₁f(t) / W(y₁, y₂)
+                    e^(At) = I + At + (At)²/2! + (At)³/3! + ...
                 </div>
                 
-                <p>Where W(y₁, y₂) is the Wronskian:</p>
+                <p>The solution to dX/dt = AX with initial condition X(0) = X₀ is:</p>
                 
                 <div class="math-display">
-                    W = y₁y₂' - y₂y₁'
+                    X(t) = e^(At)X₀
                 </div>
             </div>
 
             <div class="content-block">
-                <h3>Finding u₁ and u₂</h3>
+                <h3>Computing e^(At)</h3>
+                <p>If A has eigenvalues λ₁, λ₂, ... with eigenvectors v₁, v₂, ..., then:</p>
+                
+                <div class="math-display">
+                    e^(At) = Pe^(Dt)P⁻¹
+                </div>
+                
+                <p>Where P = [v₁ v₂ ...] and D = diag(λ₁, λ₂, ...)</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Steps</h3>
                 <ol>
-                    <li>Compute the Wronskian W</li>
-                    <li>Find u₁' and u₂' using the formulas</li>
-                    <li>Integrate to find u₁ and u₂</li>
-                    <li>Write y_p = u₁y₁ + u₂y₂</li>
+                    <li>Find eigenvalues of A</li>
+                    <li>Find eigenvectors of A</li>
+                    <li>Form P and D</li>
+                    <li>Compute e^(Dt) = diag(e^(λ₁t), e^(λ₂t), ...)</li>
+                    <li>Compute e^(At) = Pe^(Dt)P⁻¹</li>
+                    <li>Multiply by initial condition X₀</li>
                 </ol>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>Variation of parameters is the most general method for solving non-homogeneous equations. It works for any f(t), making it essential when undetermined coefficients fails.</p>
+                <p>Matrix methods provide a systematic way to solve systems of any size. They're essential for understanding stability, oscillations, and long-term behavior of systems.</p>
             </div>
         </section>
 
@@ -113,41 +115,37 @@
             <h2><span class="section-icon">📝</span> Example</h2>
             
             <div class="example-box">
-                <h4>Example 1: Solve y'' + y = sec(t)</h4>
+                <h4>Example 1: Solve dX/dt = [[2, 1], [1, 2]]X</h4>
                 <div class="example-content">
-                    <p><strong>Step 1: Find y_h</strong></p>
+                    <p><strong>Step 1: Find eigenvalues</strong></p>
                     <div class="math-display">
-                        r² + 1 = 0<br>
-                        r = ±i<br>
-                        y_h = C₁cos(t) + C₂sin(t)<br>
-                        y₁ = cos(t), y₂ = sin(t)
+                        det(A - λI) = (2-λ)² - 1 = 0<br>
+                        λ² - 4λ + 3 = 0<br>
+                        (λ - 1)(λ - 3) = 0<br>
+                        λ₁ = 1, λ₂ = 3
                     </div>
                     
-                    <p><strong>Step 2: Compute Wronskian</strong></p>
+                    <p><strong>Step 2: Find eigenvectors</strong></p>
                     <div class="math-display">
-                        W = y₁y₂' - y₂y₁' = cos(t)cos(t) - sin(t)(-sin(t)) = cos²(t) + sin²(t) = 1
+                        For λ₁ = 1: (A - I)v = 0 → v₁ = [1, -1]ᵀ<br>
+                        For λ₂ = 3: (A - 3I)v = 0 → v₂ = [1, 1]ᵀ
                     </div>
                     
-                    <p><strong>Step 3: Find u₁' and u₂'</strong></p>
+                    <p><strong>Step 3: Form P and D</strong></p>
                     <div class="math-display">
-                        u₁' = -y₂f(t)/W = -sin(t)sec(t)/1 = -tan(t)<br>
-                        u₂' = y₁f(t)/W = cos(t)sec(t)/1 = 1
+                        P = [[1, 1], [-1, 1]]<br>
+                        D = [[1, 0], [0, 3]]
                     </div>
                     
-                    <p><strong>Step 4: Integrate</strong></p>
+                    <p><strong>Step 4: Compute e^(Dt)</strong></p>
                     <div class="math-display">
-                        u₁ = ∫-tan(t)dt = ln|cos(t)|<br>
-                        u₂ = ∫1dt = t
+                        e^(Dt) = [[e^t, 0], [0, e^(3t)]]
                     </div>
                     
-                    <p><strong>Step 5: Write y_p</strong></p>
+                    <p><strong>Step 5: Compute e^(At)</strong></p>
                     <div class="math-display">
-                        y_p = u₁y₁ + u₂y₂ = cos(t)ln|cos(t)| + tsin(t)
-                    </div>
-                    
-                    <p><strong>Step 6: General solution</strong></p>
-                    <div class="math-display">
-                        y = C₁cos(t) + C₂sin(t) + cos(t)ln|cos(t)| + tsin(t)
+                        P⁻¹ = (1/2)[[1, -1], [1, 1]]<br>
+                        e^(At) = Pe^(Dt)P⁻¹ = (1/2)[[e^t + e^(3t), e^(3t) - e^t], [e^(3t) - e^t, e^t + e^(3t)]]
                     </div>
                 </div>
             </div>
@@ -158,14 +156,15 @@
             <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
             
             <div class="step-guide">
-                <h4>Step-by-Step: Variation of Parameters</h4>
+                <h4>Step-by-Step: Matrix Methods</h4>
                 <ol>
-                    <li><strong>Find y_h</strong> — Get y₁ and y₂</li>
-                    <li><strong>Compute Wronskian</strong> — W = y₁y₂' - y₂y₁'</li>
-                    <li><strong>Find u₁' and u₂'</strong> — Use the formulas</li>
-                    <li><strong>Integrate</strong> — Find u₁ and u₂</li>
-                    <li><strong>Write y_p</strong> — y_p = u₁y₁ + u₂y₂</li>
-                    <li><strong>Write general solution</strong> — y = y_h + y_p</li>
+                    <li><strong>Find eigenvalues</strong> — Solve det(A - λI) = 0</li>
+                    <li><strong>Find eigenvectors</strong> — Solve (A - λI)v = 0 for each λ</li>
+                    <li><strong>Form P</strong> — Columns are eigenvectors</li>
+                    <li><strong>Form D</strong> — Diagonal matrix of eigenvalues</li>
+                    <li><strong>Compute e^(Dt)</strong> — Diagonal matrix with e^(λt) entries</li>
+                    <li><strong>Compute e^(At)</strong> — Pe^(Dt)P⁻¹</li>
+                    <li><strong>Apply initial condition</strong> — X(t) = e^(At)X₀</li>
                 </ol>
             </div>
         </section>
@@ -177,11 +176,11 @@
             <div class="check-yourself">
                 <h4>Test Your Understanding</h4>
                 <ul>
-                    <li>When should you use variation of parameters?</li>
-                    <li>What is the Wronskian?</li>
-                    <li>How do you find u₁ and u₂?</li>
-                    <li>What's the advantage over undetermined coefficients?</li>
-                    <li>What if W = 0?</li>
+                    <li>What is a matrix exponential?</li>
+                    <li>How do you find eigenvalues?</li>
+                    <li>What is the relationship between e^(At) and eigenvectors?</li>
+                    <li>What is P and D?</li>
+                    <li>How do you apply initial conditions?</li>
                 </ul>
             </div>
         </section>
@@ -192,9 +191,9 @@
             
             <div class="whats-next">
                 <h4>Continue Your Learning</h4>
-                <p>Now that you understand variation of parameters, the next step is learning about <strong>applications</strong> — using these methods to solve real-world problems with springs and circuits.</p>
-                <a href="lesson6.html" class="next-lesson-link">
-                    Next Lesson: Applications: Springs and Circuits →
+                <p>Now that you understand matrix methods, the next step is learning about <strong>eigenvalues and eigenvectors</strong> in more detail — understanding their properties and how to compute them.</p>
+                <a href="lesson3.html" class="next-lesson-link">
+                    Next Lesson: Eigenvalues and Eigenvectors →
                 </a>
             </div>
         </section>

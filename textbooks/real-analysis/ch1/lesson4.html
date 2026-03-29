@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Density of Rationals - Real Analysis - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Real Analysis</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 4: Density of Rationals</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Density of Rationals</h1>
+            <div class="lesson-meta">
+                <span>Chapter 1: The Real Numbers</span>
+                <span>Lesson 4 of 5</span>
+                <span>⏱️ 30-40 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Understand the density property of rational numbers and its implications for the real number line.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Between any two real numbers, there exists a rational number — the rationals are "dense" in the reals.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>What Does Dense Mean?</h3>
+                <p>A set is <strong>dense</strong> in ℝ if between any two real numbers, there's an element of that set.</p>
+                
+                <p>For rationals: If a < b, then there exists q ∈ ℚ such that a < q < b.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Why Rationals Are Dense</h3>
+                <p>Given a < b, we can always find a rational between them. Here's how:</p>
+                
+                <p>Choose n large enough so that 1/n < b - a. Then find an integer m such that a < m/n < b.</p>
+                
+                <p>This works because the rationals m/n get arbitrarily close to any real number.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Irrationals Are Also Dense</h3>
+                <p>Between any two real numbers, there's also an irrational number.</p>
+                
+                <p>Proof: If a < b, then a + (b-a)/√2 is irrational and lies between a and b.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Geometric Interpretation</h3>
+                <p>On the number line, rationals and irrationals are "intertwined" — you can't draw a tiny interval without hitting both.</p>
+                
+                <p>This is why the real line feels "continuous" — there are no gaps.</p>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Density explains why we can approximate any real number with rationals. It's essential for understanding limits, continuity, and why calculus works. It also shows that ℚ and ℝ are fundamentally different, even though ℚ is dense in ℝ.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Finding a Rational Between Two Numbers</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Find a rational number between 0.7 and 0.8</p>
+                    
+                    <p><strong>Step 1: Choose a denominator</strong></p>
+                    <p>We need 1/n < 0.8 - 0.7 = 0.1. So n = 10 works (1/10 = 0.1).</p>
+                    
+                    <p><strong>Step 2: Find the numerator</strong></p>
+                    <p>We need m/10 between 0.7 and 0.8. So 7 < m < 8. But there's no integer between 7 and 8!</p>
+                    
+                    <p><strong>Step 3: Try a larger denominator</strong></p>
+                    <p>Try n = 100. We need 1/100 < 0.1, which is true. Now we need 70 < m < 80. We can choose m = 75.</p>
+                    
+                    <p><strong>Step 4: Verify</strong></p>
+                    <p>75/100 = 0.75, and 0.7 < 0.75 < 0.8. ✓</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Density Doesn't Mean "All"</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Show that √2 is not rational, even though rationals are dense.</p>
+                    
+                    <p><strong>Step 1: Assume √2 is rational</strong></p>
+                    <p>Suppose √2 = p/q where p, q are integers with no common factors.</p>
+                    
+                    <p><strong>Step 2: Square both sides</strong></p>
+                    <p>2 = p²/q², so p² = 2q².</p>
+                    
+                    <p><strong>Step 3: Analyze parity</strong></p>
+                    <p>p² is even, so p is even. Write p = 2k. Then 4k² = 2q², so q² = 2k², meaning q is also even.</p>
+                    
+                    <p><strong>Step 4: Contradiction</strong></p>
+                    <p>Both p and q are even, contradicting that they have no common factors. So √2 is irrational.</p>
+                    
+                    <p><strong>Key insight:</strong> Density doesn't mean every number is rational — just that rationals are "everywhere" on the number line.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Using Density</h4>
+                <ol>
+                    <li><strong>Identify the interval</strong> — What are a and b?</li>
+                    <li><strong>Choose a denominator</strong> — Make 1/n < b - a</li>
+                    <li><strong>Find the numerator</strong> — Find m such that a < m/n < b</li>
+                    <li><strong>Verify your answer</strong> — Check that it's in the interval</li>
+                    <li><strong>Remember the principle</strong> — Between any two reals, there's a rational</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What does it mean for rationals to be dense?</li>
+                    <li>Find a rational between 0.3 and 0.4</li>
+                    <li>Are irrationals also dense? Why?</li>
+                    <li>Does density mean every number is rational?</li>
+                    <li>Why is density important for analysis?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand density, the next step is learning about the <strong>Archimedean property</strong> — another fundamental property of the real numbers.</p>
+                <a href="lesson5.html" class="next-lesson-link">
+                    Next Lesson: The Archimedean Property →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

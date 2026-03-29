@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrating Factors - Differential Equations - MathLearn</title>
+    <title>Eigenvalues and Eigenvectors - Differential Equations - MathLearn</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
                     <a href="../index.html" class="breadcrumb-link">Differential Equations</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <span class="breadcrumb-current">Lesson 5: Integrating Factors</span>
+                    <span class="breadcrumb-current">Lesson 3: Eigenvalues and Eigenvectors</span>
                 </li>
             </ol>
         </div>
@@ -42,11 +42,11 @@
 
     <main class="lesson-container">
         <div class="lesson-header">
-            <h1 class="lesson-title">Integrating Factors</h1>
+            <h1 class="lesson-title">Eigenvalues and Eigenvectors</h1>
             <div class="lesson-meta">
-                <span>Chapter 1: First-Order Differential Equations</span>
-                <span>Lesson 5 of 6</span>
-                <span>⏱️ 35-45 minutes</span>
+                <span>Chapter 3: Systems of Differential Equations</span>
+                <span>Lesson 3 of 5</span>
+                <span>⏱️ 40-50 minutes</span>
             </div>
         </div>
 
@@ -54,11 +54,11 @@
         <section class="lesson-section">
             <h2><span class="section-icon">🎯</span> Goal</h2>
             <div class="goal-box">
-                <p>Learn how to use integrating factors to solve non-exact differential equations.</p>
+                <p>Master finding eigenvalues and eigenvectors, which are essential for solving systems of differential equations.</p>
             </div>
             
             <div class="one-sentence">
-                <strong>In one sentence:</strong> Integrating factors multiply a non-exact equation to make it exact, allowing you to solve it.
+                <strong>In one sentence:</strong> Eigenvalues and eigenvectors reveal the fundamental behavior of a system — how it grows, decays, or oscillates.
             </div>
         </section>
 
@@ -67,37 +67,48 @@
             <h2><span class="section-icon">💡</span> The Idea</h2>
             
             <div class="content-block">
-                <h3>When to Use</h3>
-                <p>If an equation M dx + N dy = 0 is not exact (∂M/∂y ≠ ∂N/∂x), you can sometimes find an integrating factor μ(x, y) that makes it exact.</p>
+                <h3>Definitions</h3>
+                <p>For a matrix A:</p>
+                <ul>
+                    <li><strong>Eigenvalue λ:</strong> A scalar where Av = λv for some nonzero vector v</li>
+                    <li><strong>Eigenvector v:</strong> A nonzero vector where Av = λv</li>
+                </ul>
             </div>
 
             <div class="content-block">
-                <h3>Finding the Integrating Factor</h3>
-                <p>If (∂M/∂y - ∂N/∂x)/N is a function of x only, then:</p>
+                <h3>Finding Eigenvalues</h3>
+                <p>Solve the characteristic equation:</p>
                 
                 <div class="math-display">
-                    μ(x) = e^(∫[(∂M/∂y - ∂N/∂x)/N]dx)
+                    det(A - λI) = 0
                 </div>
                 
-                <p>If (∂N/∂x - ∂M/∂y)/M is a function of y only, then:</p>
-                
-                <div class="math-display">
-                    μ(y) = e^(∫[(∂N/∂x - ∂M/∂y)/M]dy)
-                </div>
+                <p>This gives a polynomial in λ. The roots are the eigenvalues.</p>
             </div>
 
             <div class="content-block">
-                <h3>After Finding μ</h3>
-                <ol>
-                    <li>Multiply the original equation by μ</li>
-                    <li>Check that the new equation is exact</li>
-                    <li>Solve the exact equation</li>
-                </ol>
+                <h3>Finding Eigenvectors</h3>
+                <p>For each eigenvalue λ, solve:</p>
+                
+                <div class="math-display">
+                    (A - λI)v = 0
+                </div>
+                
+                <p>The solutions are the eigenvectors for that eigenvalue.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Types of Eigenvalues</h3>
+                <ul>
+                    <li><strong>Real distinct:</strong> Different real numbers</li>
+                    <li><strong>Repeated:</strong> Same eigenvalue appears multiple times</li>
+                    <li><strong>Complex:</strong> Come in conjugate pairs a ± bi</li>
+                </ul>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>Integrating factors extend the power of the exact equation method to a wider class of problems. They're essential when equations aren't separable or linear.</p>
+                <p>Eigenvalues and eigenvectors are the key to understanding systems. They determine stability, oscillation frequency, and long-term behavior. They're used throughout science and engineering.</p>
             </div>
         </section>
 
@@ -106,29 +117,32 @@
             <h2><span class="section-icon">📝</span> Example</h2>
             
             <div class="example-box">
-                <h4>Example 1: Solve (2xy + y²)dx + (x² + 2xy)dy = 0</h4>
+                <h4>Example 1: Find eigenvalues and eigenvectors</h4>
                 <div class="example-content">
-                    <p><strong>Step 1: Check exactness</strong></p>
+                    <p><strong>Problem:</strong> Find eigenvalues and eigenvectors of A = [[4, 1], [2, 3]]</p>
+                    
+                    <p><strong>Step 1: Find eigenvalues</strong></p>
                     <div class="math-display">
-                        M = 2xy + y², N = x² + 2xy<br>
-                        ∂M/∂y = 2x + 2y, ∂N/∂x = 2x + 2y ✓
+                        det(A - λI) = (4-λ)(3-λ) - 2 = 0<br>
+                        λ² - 7λ + 10 = 0<br>
+                        (λ - 2)(λ - 5) = 0<br>
+                        λ₁ = 2, λ₂ = 5
                     </div>
                     
-                    <p>This is already exact! But let's see how integrating factors work.</p>
-                    
-                    <p><strong>Step 2: Find integrating factor</strong></p>
+                    <p><strong>Step 2: Find eigenvector for λ₁ = 2</strong></p>
                     <div class="math-display">
-                        (∂M/∂y - ∂N/∂x)/N = (2x + 2y - 2x - 2y)/(x² + 2xy) = 0
+                        (A - 2I)v = 0<br>
+                        [[2, 1], [2, 1]]v = 0<br>
+                        2v₁ + v₂ = 0 → v₂ = -2v₁<br>
+                        v₁ = [1, -2]ᵀ
                     </div>
                     
-                    <p>Since this is 0, μ = e^0 = 1 (no change needed).</p>
-                    
-                    <p><strong>Step 3: Solve the exact equation</strong></p>
+                    <p><strong>Step 3: Find eigenvector for λ₂ = 5</strong></p>
                     <div class="math-display">
-                        F = ∫M dx = ∫(2xy + y²)dx = x²y + xy² + h(y)<br>
-                        ∂F/∂y = x² + 2xy + h'(y) = N = x² + 2xy<br>
-                        h'(y) = 0, h(y) = 0<br>
-                        Solution: x²y + xy² = C
+                        (A - 5I)v = 0<br>
+                        [[-1, 1], [2, -2]]v = 0<br>
+                        -v₁ + v₂ = 0 → v₂ = v₁<br>
+                        v₂ = [1, 1]ᵀ
                     </div>
                 </div>
             </div>
@@ -139,13 +153,13 @@
             <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
             
             <div class="step-guide">
-                <h4>Step-by-Step: Using Integrating Factors</h4>
+                <h4>Step-by-Step: Finding Eigenvalues and Eigenvectors</h4>
                 <ol>
-                    <li><strong>Check exactness</strong> — Is ∂M/∂y = ∂N/∂x?</li>
-                    <li><strong>If not exact, find μ</strong> — Use the formulas</li>
-                    <li><strong>Multiply by μ</strong> — Get a new equation</li>
-                    <li><strong>Check exactness again</strong> — The new equation should be exact</li>
-                    <li><strong>Solve the exact equation</strong> — Use the exact method</li>
+                    <li><strong>Write A - λI</strong> — Subtract λ from diagonal</li>
+                    <li><strong>Compute determinant</strong> — det(A - λI)</li>
+                    <li><strong>Solve for λ</strong> — Find roots of the polynomial</li>
+                    <li><strong>For each λ, solve (A - λI)v = 0</strong> — Find eigenvectors</li>
+                    <li><strong>Check your work</strong> — Verify Av = λv</li>
                 </ol>
             </div>
         </section>
@@ -157,11 +171,11 @@
             <div class="check-yourself">
                 <h4>Test Your Understanding</h4>
                 <ul>
-                    <li>When do you need an integrating factor?</li>
-                    <li>How do you find an integrating factor?</li>
-                    <li>What does multiplying by μ do?</li>
-                    <li>Is (y + 1)dx + (x + 1)dy = 0 exact?</li>
-                    <li>What's the difference between this and linear equation integrating factors?</li>
+                    <li>What is an eigenvalue?</li>
+                    <li>What is an eigenvector?</li>
+                    <li>How do you find eigenvalues?</li>
+                    <li>How do you find eigenvectors?</li>
+                    <li>What does Av = λv mean?</li>
                 </ul>
             </div>
         </section>
@@ -172,9 +186,9 @@
             
             <div class="whats-next">
                 <h4>Continue Your Learning</h4>
-                <p>Now that you understand integrating factors, the next step is learning about <strong>modeling with differential equations</strong> — applying these techniques to real-world problems.</p>
-                <a href="lesson6.html" class="next-lesson-link">
-                    Next Lesson: Modeling with Differential Equations →
+                <p>Now that you understand eigenvalues and eigenvectors, the next step is learning about <strong>phase portraits</strong> — visualizing the behavior of systems.</p>
+                <a href="lesson4.html" class="next-lesson-link">
+                    Next Lesson: Phase Portraits →
                 </a>
             </div>
         </section>

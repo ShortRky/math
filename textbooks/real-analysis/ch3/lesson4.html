@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Value Theorem - Real Analysis - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Real Analysis</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 4: Extreme Value Theorem</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Extreme Value Theorem</h1>
+            <div class="lesson-meta">
+                <span>Chapter 3: Continuity</span>
+                <span>Lesson 4 of 5</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Understand and apply the Extreme Value Theorem — continuous functions on closed intervals attain maximum and minimum values.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> A continuous function on a closed interval must achieve both a maximum and a minimum value.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>The Theorem</h3>
+                <p><strong>Extreme Value Theorem (EVT):</strong> If f is continuous on a closed interval [a, b], then f attains its maximum and minimum values on [a, b].</p>
+                
+                <p>In other words, there exist c, d ∈ [a, b] such that f(c) ≤ f(x) ≤ f(d) for all x ∈ [a, b].</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Why Closed Intervals?</h3>
+                <p>The theorem requires a closed interval [a, b], not an open interval (a, b).</p>
+                
+                <p>Example: f(x) = 1/x on (0, 1) is continuous but has no minimum — it approaches 0 but never reaches it.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Proof Strategy</h3>
+                <p>The proof uses two key results:</p>
+                <ol>
+                    <li><strong>Boundedness Theorem:</strong> Continuous functions on closed intervals are bounded</li>
+                    <li><strong>Bolzano-Weierstrass:</strong> Every bounded sequence has a convergent subsequence</li>
+                </ol>
+                
+                <p>We show that f is bounded, then use sequences to find where the supremum and infimum are attained.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Applications</h3>
+                <ul>
+                    <li><strong>Optimization:</strong> Guarantees that maximum and minimum values exist</li>
+                    <li><strong>Physics:</strong> Energy, temperature, and other quantities have maximum/minimum values</li>
+                    <li><strong>Economics:</strong> Profit, cost, and utility functions have optimal values</li>
+                </ul>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>The EVT is essential for optimization problems. It guarantees that when you're looking for maximum or minimum values of a continuous function on a closed interval, they actually exist. This is crucial for calculus, physics, engineering, and economics.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Finding Maximum and Minimum</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Find the maximum and minimum of f(x) = x² - 4x + 3 on [0, 5]</p>
+                    
+                    <p><strong>Step 1: Verify conditions</strong></p>
+                    <p>f(x) = x² - 4x + 3 is a polynomial, so it's continuous on [0, 5].</p>
+                    
+                    <p><strong>Step 2: Find critical points</strong></p>
+                    <div class="math-display">
+                        f'(x) = 2x - 4 = 0<br>
+                        x = 2
+                    </div>
+                    
+                    <p><strong>Step 3: Evaluate at critical points and endpoints</strong></p>
+                    <div class="math-display">
+                        f(0) = 0² - 4(0) + 3 = 3<br>
+                        f(2) = 2² - 4(2) + 3 = 4 - 8 + 3 = -1<br>
+                        f(5) = 5² - 4(5) + 3 = 25 - 20 + 3 = 8
+                    </div>
+                    
+                    <p><strong>Step 4: Identify maximum and minimum</strong></p>
+                    <p>Maximum: f(5) = 8 at x = 5</p>
+                    <p>Minimum: f(2) = -1 at x = 2</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Why Closed Intervals Matter</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Show that f(x) = x on (0, 1) has no maximum</p>
+                    
+                    <p><strong>Step 1: Check continuity</strong></p>
+                    <p>f(x) = x is continuous on (0, 1).</p>
+                    
+                    <p><strong>Step 2: Look for maximum</strong></p>
+                    <p>For any x ∈ (0, 1), we have x < 1. But 1 is not in the interval (0, 1).</p>
+                    
+                    <p><strong>Step 3: Conclusion</strong></p>
+                    <p>f has no maximum on (0, 1) because the supremum (1) is not in the interval.</p>
+                    
+                    <p><strong>Note:</strong> If we consider [0, 1], then f(1) = 1 is the maximum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Using the Extreme Value Theorem</h4>
+                <ol>
+                    <li><strong>Check continuity</strong> — Is f continuous on [a, b]?</li>
+                    <li><strong>Find critical points</strong> — Where is f'(x) = 0 or undefined?</li>
+                    <li><strong>Evaluate at critical points</strong> — What is f(c) for each critical point?</li>
+                    <li><strong>Evaluate at endpoints</strong> — What are f(a) and f(b)?</li>
+                    <li><strong>Compare values</strong> — The largest is the maximum, smallest is the minimum</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>State the Extreme Value Theorem</li>
+                    <li>Why does the theorem require a closed interval?</li>
+                    <li>Find the maximum and minimum of f(x) = sin(x) on [0, π]</li>
+                    <li>Can a continuous function on an open interval have a maximum?</li>
+                    <li>What's the difference between the EVT and the IVT?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand the Extreme Value Theorem, the next step is learning about <strong>uniform continuity</strong> — a stronger form of continuity that's important for integration and other advanced topics.</p>
+                <a href="lesson5.html" class="next-lesson-link">
+                    Next Lesson: Uniform Continuity →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

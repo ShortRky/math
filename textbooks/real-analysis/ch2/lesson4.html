@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsequences - Real Analysis - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Real Analysis</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 4: Subsequences</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Subsequences</h1>
+            <div class="lesson-meta">
+                <span>Chapter 2: Sequences</span>
+                <span>Lesson 4 of 6</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Understand subsequences and their relationship to convergence — a crucial concept for the Bolzano-Weierstrass Theorem.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> A subsequence is a sequence formed by selecting terms from another sequence, and if a sequence converges, all its subsequences converge to the same limit.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>What is a Subsequence?</h3>
+                <p>Given a sequence (aₙ), a <strong>subsequence</strong> is a sequence (aₙₖ) where n₁ < n₂ < n₃ < ... are indices from the original sequence.</p>
+                
+                <p>For example, if aₙ = 1/n, then a₂ₖ = 1/(2k) gives the subsequence 1/2, 1/4, 1/6, ...</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Key Property</h3>
+                <p><strong>Theorem:</strong> If aₙ → L, then every subsequence aₙₖ also converges to L.</p>
+                
+                <p>This makes sense: if the original sequence gets close to L and stays there, then any selection of terms from that sequence also gets close to L and stays there.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>The Converse is False</h3>
+                <p>If every subsequence converges to L, does the original sequence converge to L? Yes!</p>
+                
+                <p>But if some subsequence converges to L, the original sequence might not converge. For example, aₙ = (-1)ⁿ has subsequences converging to 1 and -1, but the sequence itself doesn't converge.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Why Subsequences Matter</h3>
+                <ul>
+                    <li>They help us understand the behavior of sequences</li>
+                    <li>They're essential for the Bolzano-Weierstrass Theorem</li>
+                    <li>They allow us to extract convergent subsequences from bounded sequences</li>
+                </ul>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Subsequences are a powerful tool for analyzing sequences. They allow us to "zoom in" on specific parts of a sequence and extract convergent behavior, even when the original sequence doesn't converge.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Subsequences of a Convergent Sequence</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Let aₙ = 1/n. Show that every subsequence converges to 0.</p>
+                    
+                    <p><strong>Step 1: Note that aₙ → 0</strong></p>
+                    <p>We know that 1/n → 0 as n → ∞.</p>
+                    
+                    <p><strong>Step 2: Consider any subsequence</strong></p>
+                    <p>Let aₙₖ = 1/nₖ be any subsequence. Since nₖ ≥ k, we have:</p>
+                    <div class="math-display">
+                        0 < 1/nₖ ≤ 1/k
+                    </div>
+                    
+                    <p><strong>Step 3: Apply the Squeeze Theorem</strong></p>
+                    <p>Since 1/k → 0, by the Squeeze Theorem, 1/nₖ → 0.</p>
+                    
+                    <p><strong>Step 4: Conclusion</strong></p>
+                    <p>Every subsequence of (1/n) converges to 0.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: A Sequence with Different Subsequential Limits</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Let aₙ = (-1)ⁿ. Find two subsequences with different limits.</p>
+                    
+                    <p><strong>Step 1: Identify the sequence</strong></p>
+                    <p>The sequence is: -1, 1, -1, 1, -1, 1, ...</p>
+                    
+                    <p><strong>Step 2: Find a subsequence converging to 1</strong></p>
+                    <p>Take nₖ = 2k (even indices): a₂ₖ = (-1)²ᵏ = 1 → 1</p>
+                    
+                    <p><strong>Step 3: Find a subsequence converging to -1</strong></p>
+                    <p>Take nₖ = 2k-1 (odd indices): a₂ₖ₋₁ = (-1)²ᵏ⁻¹ = -1 → -1</p>
+                    
+                    <p><strong>Step 4: Conclusion</strong></p>
+                    <p>The sequence has subsequences converging to different limits, so the original sequence doesn't converge.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Working with Subsequences</h4>
+                <ol>
+                    <li><strong>Identify the original sequence</strong> — What is (aₙ)?</li>
+                    <li><strong>Define the subsequence</strong> — Choose indices n₁ < n₂ < n₃ < ...</li>
+                    <li><strong>Write out the subsequence</strong> — What is aₙₖ?</li>
+                    <li><strong>Analyze convergence</strong> — Does it converge? To what?</li>
+                    <li><strong>Draw conclusions</strong> — What does this tell you about the original sequence?</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What is a subsequence?</li>
+                    <li>If aₙ → L, what can you say about subsequences?</li>
+                    <li>Can a sequence have subsequences converging to different limits?</li>
+                    <li>Find a subsequence of (1/n) that converges to 0</li>
+                    <li>Why are subsequences important?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand subsequences, the next step is learning about the <strong>Bolzano-Weierstrass Theorem</strong> — every bounded sequence has a convergent subsequence.</p>
+                <a href="lesson5.html" class="next-lesson-link">
+                    Next Lesson: Bolzano-Weierstrass Theorem →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniform Continuity - Real Analysis - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Real Analysis</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 5: Uniform Continuity</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Uniform Continuity</h1>
+            <div class="lesson-meta">
+                <span>Chapter 3: Continuity</span>
+                <span>Lesson 5 of 5</span>
+                <span>⏱️ 40-50 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Understand uniform continuity — a stronger form of continuity that's essential for integration and advanced analysis.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> A function is uniformly continuous if the same δ works for every point in the domain, not just at individual points.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>The Definition</h3>
+                <p>A function f is <strong>uniformly continuous</strong> on a set S if:</p>
+                
+                <p>For every ε > 0, there exists δ > 0 such that for all x, y ∈ S with |x - y| < δ:</p>
+                
+                <div class="math-display">
+                    |f(x) - f(y)| < ε
+                </div>
+                
+                <p>The key difference from ordinary continuity: δ depends only on ε, not on the point x.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Ordinary vs. Uniform Continuity</h3>
+                <p><strong>Ordinary continuity at c:</strong> For every ε > 0, there exists δ > 0 (which may depend on c) such that if |x - c| < δ, then |f(x) - f(c)| < ε.</p>
+                
+                <p><strong>Uniform continuity on S:</strong> For every ε > 0, there exists δ > 0 (which works for all points in S) such that if |x - y| < δ, then |f(x) - f(y)| < ε.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Important Theorems</h3>
+                <ul>
+                    <li><strong>Heine-Cantor Theorem:</strong> Every continuous function on a closed interval [a, b] is uniformly continuous</li>
+                    <li><strong>Lipschitz continuity:</strong> If |f(x) - f(y)| ≤ K|x - y| for some constant K, then f is uniformly continuous</li>
+                    <li><strong>Composition:</strong> The composition of uniformly continuous functions is uniformly continuous</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Why Uniform Continuity Matters</h3>
+                <ul>
+                    <li><strong>Integration:</strong> Uniformly continuous functions are Riemann integrable</li>
+                    <li><strong>Approximation:</strong> We can approximate uniformly continuous functions uniformly</li>
+                    <li><strong>Extension:</strong> Uniformly continuous functions can be extended to closures</li>
+                </ul>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Uniform continuity is crucial for many advanced topics in analysis. It ensures that functions behave "consistently" across their entire domain, which is essential for integration, approximation theory, and extending functions to larger domains.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Proving Uniform Continuity</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Prove that f(x) = 2x + 1 is uniformly continuous on ℝ</p>
+                    
+                    <p><strong>Step 1: Set up the definition</strong></p>
+                    <p>Let ε > 0. We need to find δ > 0 such that for all x, y with |x - y| < δ:</p>
+                    <div class="math-display">
+                        |(2x + 1) - (2y + 1)| < ε
+                    </div>
+                    
+                    <p><strong>Step 2: Simplify</strong></p>
+                    <div class="math-display">
+                        |(2x + 1) - (2y + 1)| = |2x - 2y| = 2|x - y|
+                    </div>
+                    
+                    <p><strong>Step 3: Choose δ</strong></p>
+                    <p>We need 2|x - y| < ε, so |x - y| < ε/2. Choose δ = ε/2.</p>
+                    
+                    <p><strong>Step 4: Verify</strong></p>
+                    <p>If |x - y| < δ = ε/2, then |f(x) - f(y)| = 2|x - y| < 2(ε/2) = ε.</p>
+                    
+                    <p><strong>Step 5: Conclusion</strong></p>
+                    <p>f(x) = 2x + 1 is uniformly continuous on ℝ.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: A Function That's Not Uniformly Continuous</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Show that f(x) = 1/x is not uniformly continuous on (0, 1)</p>
+                    
+                    <p><strong>Step 1: Choose ε</strong></p>
+                    <p>Let ε = 1. We need to show that for any δ > 0, there exist x, y with |x - y| < δ but |f(x) - f(y)| ≥ 1.</p>
+                    
+                    <p><strong>Step 2: Find x, y for any δ</strong></p>
+                    <p>Given δ > 0, choose n large enough so that 1/n < δ. Let:</p>
+                    <div class="math-display">
+                        x = 1/n, y = 1/(n+1)
+                    </div>
+                    
+					<p><strong>Step 3: Check |x - y|</strong></p>
+                    <div class="math-display">
+                        |x - y| = |1/n - 1/(n+1)| = 1/(n(n+1)) < 1/n < δ
+                    </div>
+                    
+                    <p><strong>Step 4: Check |f(x) - f(y)|</strong></p>
+                    <div class="math-display">
+                        |f(x) - f(y)| = |n - (n+1)| = 1 ≥ ε
+                    </div>
+                    
+                    <p><strong>Step 5: Conclusion</strong></p>
+                    <p>For any δ > 0, we found x, y with |x - y| < δ but |f(x) - f(y)| ≥ 1. Therefore, f is not uniformly continuous on (0, 1).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Proving Uniform Continuity</h4>
+                <ol>
+                    <li><strong>Set up the definition</strong> — Let ε > 0, find δ > 0</li>
+                    <li><strong>Simplify |f(x) - f(y)|</strong> — Express in terms of |x - y|</li>
+                    <li><strong>Choose δ</strong> — Often δ = ε/K for some constant K</li>
+                    <li><strong>Verify</strong> — Show that |x - y| < δ implies |f(x) - f(y)| < ε</li>
+                    <li><strong>Conclude</strong> — The function is uniformly continuous</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What's the difference between continuity and uniform continuity?</li>
+                    <li>Prove that f(x) = x² is uniformly continuous on [0, 1]</li>
+                    <li>Is f(x) = x² uniformly continuous on ℝ?</li>
+                    <li>What is the Heine-Cantor Theorem?</li>
+                    <li>Why is uniform continuity important for integration?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Congratulations! You've completed Chapter 3 on Continuity. You now understand the rigorous definition of continuity, the Intermediate Value Theorem, the Extreme Value Theorem, and uniform continuity.</p>
+                <p>You've now completed the entire Real Analysis textbook! You have a solid foundation in the rigorous theory of real numbers, sequences, and continuous functions.</p>
+                <a href="../../index.html" class="next-lesson-link">
+                    Back to Real Analysis Home →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

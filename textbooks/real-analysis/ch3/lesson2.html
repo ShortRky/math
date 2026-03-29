@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties of Continuous Functions - Real Analysis - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Real Analysis</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 2: Properties of Continuous Functions</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Properties of Continuous Functions</h1>
+            <div class="lesson-meta">
+                <span>Chapter 3: Continuity</span>
+                <span>Lesson 2 of 5</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn the fundamental properties of continuous functions — how continuity interacts with arithmetic operations and composition.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Continuous functions can be added, multiplied, and composed to create new continuous functions.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>Arithmetic Properties</h3>
+                <p>If f and g are continuous at c, then:</p>
+                <ul>
+                    <li><strong>Sum:</strong> f + g is continuous at c</li>
+                    <li><strong>Difference:</strong> f - g is continuous at c</li>
+                    <li><strong>Product:</strong> f · g is continuous at c</li>
+                    <li><strong>Quotient:</strong> f / g is continuous at c (if g(c) ≠ 0)</li>
+                    <li><strong>Scalar multiple:</strong> kf is continuous at c for any constant k</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Composition</h3>
+                <p>If g is continuous at c and f is continuous at g(c), then f ∘ g is continuous at c.</p>
+                
+                <p>In other words: the composition of continuous functions is continuous.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Why These Properties Hold</h3>
+                <p>These follow from the limit theorems. For example, to show f + g is continuous:</p>
+                
+                <div class="math-display">
+                    lim(x→c) [f(x) + g(x)] = lim(x→c) f(x) + lim(x→c) g(x) = f(c) + g(c)
+                </div>
+                
+                <p>The other properties follow similarly.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Examples of Continuous Functions</h3>
+                <ul>
+                    <li><strong>Polynomials:</strong> p(x) = aₙxⁿ + ... + a₁x + a₀ (continuous everywhere)</li>
+                    <li><strong>Rational functions:</strong> p(x)/q(x) (continuous where q(x) ≠ 0)</li>
+                    <li><strong>Trigonometric functions:</strong> sin(x), cos(x) (continuous everywhere)</li>
+                    <li><strong>Exponential functions:</strong> eˣ (continuous everywhere)</li>
+                    <li><strong>Logarithmic functions:</strong> ln(x) (continuous for x > 0)</li>
+                </ul>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>These properties allow us to build complex continuous functions from simple ones. Instead of proving continuity from scratch for every function, we can use these rules to quickly determine continuity.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Proving Continuity Using Properties</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Show that f(x) = (x² + 1)/(x + 2) is continuous at x = 1</p>
+                    
+                    <p><strong>Step 1: Identify the components</strong></p>
+                    <p>f(x) = (x² + 1)/(x + 2) is a quotient of two functions:</p>
+                    <ul>
+                        <li>g(x) = x² + 1 (polynomial, continuous everywhere)</li>
+                        <li>h(x) = x + 2 (polynomial, continuous everywhere)</li>
+                    </ul>
+                    
+                    <p><strong>Step 2: Check the denominator</strong></p>
+                    <p>h(1) = 1 + 2 = 3 ≠ 0</p>
+                    
+                    <p><strong>Step 3: Apply the quotient rule</strong></p>
+                    <p>Since g and h are continuous at x = 1 and h(1) ≠ 0, the quotient g/h is continuous at x = 1.</p>
+                    
+                    <p><strong>Step 4: Conclusion</strong></p>
+                    <p>f(x) = (x² + 1)/(x + 2) is continuous at x = 1.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Composition of Continuous Functions</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Show that f(x) = sin(x²) is continuous everywhere</p>
+                    
+                    <p><strong>Step 1: Identify the composition</strong></p>
+                    <p>f(x) = sin(x²) = (sin ∘ g)(x) where g(x) = x²</p>
+                    
+                    <p><strong>Step 2: Check continuity of components</strong></p>
+                    <ul>
+                        <li>g(x) = x² is continuous everywhere (polynomial)</li>
+                        <li>sin(x) is continuous everywhere</li>
+                    </ul>
+                    
+                    <p><strong>Step 3: Apply the composition rule</strong></p>
+                    <p>Since g is continuous everywhere and sin is continuous everywhere, the composition sin ∘ g is continuous everywhere.</p>
+                    
+                    <p><strong>Step 4: Conclusion</strong></p>
+                    <p>f(x) = sin(x²) is continuous everywhere.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Using Properties to Prove Continuity</h4>
+                <ol>
+                    <li><strong>Break down the function</strong> — Identify sums, products, quotients, compositions</li>
+                    <li><strong>Check each component</strong> — Are the basic functions continuous?</li>
+                    <li><strong>Apply the appropriate rule</strong> — Sum, product, quotient, or composition</li>
+                    <li><strong>Check conditions</strong> — For quotients, is the denominator nonzero?</li>
+                    <li><strong>Conclude</strong> — The function is continuous where the rules apply</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What happens when you add two continuous functions?</li>
+                    <li>When is the quotient of two continuous functions continuous?</li>
+                    <li>Is the composition of continuous functions always continuous?</li>
+                    <li>Prove that f(x) = eˣ + cos(x) is continuous everywhere</li>
+                    <li>Where is f(x) = 1/(x - 3) continuous?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand properties of continuous functions, the next step is learning about the <strong>Intermediate Value Theorem</strong> — a powerful result about the behavior of continuous functions.</p>
+                <a href="lesson3.html" class="next-lesson-link">
+                    Next Lesson: Intermediate Value Theorem →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>
