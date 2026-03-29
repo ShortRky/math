@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain and Range - Calculus Volume 1 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 1</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 2: Domain and Range</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Domain and Range</h1>
+            <div class="lesson-meta">
+                <span>Chapter 1: Functions and Graphs</span>
+                <span>Lesson 2 of 5</span>
+                <span>⏱️ 25-35 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to identify the domain (all possible inputs) and range (all possible outputs) of a function.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Domain is what you CAN put in; range is what you CAN get out.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>What is Domain?</h3>
+                <p>The <strong>domain</strong> of a function is the set of all input values (x-values) for which the function is defined. It's the list of all numbers you're allowed to put into the function.</p>
+                
+                <div class="example-box">
+                    <h4>Example: f(x) = x²</h4>
+                    <div class="example-content">
+                        <p>What numbers can you square?</p>
+                        <ul>
+                            <li>Can you square 2? Yes: 2² = 4 ✓</li>
+                            <li>Can you square -3? Yes: (-3)² = 9 ✓</li>
+                            <li>Can you square 0? Yes: 0² = 0 ✓</li>
+                            <li>Can you square 1.5? Yes: (1.5)² = 2.25 ✓</li>
+                        </ul>
+                        <p><strong>Domain:</strong> All real numbers, written as (-∞, ∞) or ℝ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>What is Range?</h3>
+                <p>The <strong>range</strong> of a function is the set of all output values (y-values) that the function can produce. It's the list of all numbers you can get out of the function.</p>
+                
+                <div class="example-box">
+                    <h4>Example: f(x) = x²</h4>
+                    <div class="example-content">
+                        <p>What numbers can you get by squaring?</p>
+                        <ul>
+                            <li>Can you get 4? Yes: 2² = 4 ✓</li>
+                            <li>Can you get 9? Yes: 3² = 9 ✓</li>
+                            <li>Can you get 0? Yes: 0² = 0 ✓</li>
+                            <li>Can you get -4? No: no number squared gives a negative ✗</li>
+                        </ul>
+                        <p><strong>Range:</strong> All non-negative numbers, written as [0, ∞)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Common Restrictions on Domain</h3>
+                <p>Some functions have inputs that aren't allowed. Watch for these common restrictions:</p>
+                
+                <div class="example-box">
+                    <h4>1. Division by Zero</h4>
+                    <div class="example-content">
+                        <p>You can't divide by zero!</p>
+                        <div class="math-display">
+                            f(x) = 1/x
+                        </div>
+                        <p>x cannot be 0, so domain is all real numbers except 0: (-∞, 0) ∪ (0, ∞)</p>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>2. Square Roots of Negative Numbers</h4>
+                    <div class="example-content">
+                        <p>You can't take the square root of a negative number (in real numbers)!</p>
+                        <div class="math-display">
+                            f(x) = √x
+                        </div>
+                        <p>x must be ≥ 0, so domain is [0, ∞)</p>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>3. Logarithms of Non-Positive Numbers</h4>
+                    <div class="example-content">
+                        <p>You can't take the log of zero or a negative number!</p>
+                        <div class="math-display">
+                            f(x) = ln(x)
+                        </div>
+                        <p>x must be > 0, so domain is (0, ∞)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Knowing the domain and range helps you understand what a function can and cannot do. In calculus, we'll need to know these to find limits, derivatives, and integrals correctly.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Find the domain and range of f(x) = √(x - 2)</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Find the domain</strong></p>
+                    <p>The expression under the square root must be ≥ 0:</p>
+                    <div class="math-display">
+                        x - 2 ≥ 0<br>
+                        x ≥ 2
+                    </div>
+                    <p><strong>Domain:</strong> [2, ∞)</p>
+                    
+                    <p><strong>Step 2: Find the range</strong></p>
+                    <p>When x = 2: f(2) = √0 = 0</p>
+                    <p>As x increases, √(x-2) increases without bound</p>
+                    <p><strong>Range:</strong> [0, ∞)</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Find the domain and range of g(x) = 1/(x + 3)</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Find the domain</strong></p>
+                    <p>The denominator cannot be zero:</p>
+                    <div class="math-display">
+                        x + 3 ≠ 0<br>
+                        x ≠ -3
+                    </div>
+                    <p><strong>Domain:</strong> (-∞, -3) ∪ (-3, ∞)</p>
+                    
+                    <p><strong>Step 2: Find the range</strong></p>
+                    <p>The output can be any number except 0 (since 1 divided by anything is never 0)</p>
+                    <p><strong>Range:</strong> (-∞, 0) ∪ (0, ∞)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Finding Domain</h4>
+                <ol>
+                    <li><strong>Look for restrictions:</strong> Check for division, square roots, logarithms</li>
+                    <li><strong>Set restrictions:</strong> Write what cannot happen (e.g., denominator ≠ 0)</li>
+                    <li><strong>Solve inequalities:</strong> Find what values ARE allowed</li>
+                    <li><strong>Write the domain:</strong> Use interval notation or set notation</li>
+                </ol>
+            </div>
+
+            <div class="step-guide">
+                <h4>Step-by-Step: Finding Range</h4>
+                <ol>
+                    <li><strong>Find the minimum:</strong> What's the smallest output possible?</li>
+                    <li><strong>Find the maximum:</strong> What's the largest output possible?</li>
+                    <li><strong>Check for gaps:</strong> Are there any outputs that can't be achieved?</li>
+                    <li><strong>Write the range:</strong> Use interval notation or set notation</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What is the domain of f(x) = √(x + 5)?</li>
+                    <li>What is the domain of g(x) = 1/(x - 2)?</li>
+                    <li>Can the range of a function be the same as its domain?</li>
+                    <li>What is the range of h(x) = x² + 1?</li>
+                    <li>Why can't you divide by zero?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand domain and range, the next step is learning how to <strong>graph functions</strong> — visualizing the relationship between inputs and outputs.</p>
+                <a href="lesson3.html" class="next-lesson-link">
+                    Next Lesson: Graphing Functions →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Integrals - Calculus Volume 2 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 2</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 2: Trigonometric Integrals</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Trigonometric Integrals</h1>
+            <div class="lesson-meta">
+                <span>Chapter 1: Integration Techniques</span>
+                <span>Lesson 2 of 6</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn techniques for integrating products of sine and cosine functions.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Use trigonometric identities and substitution to simplify integrals of trig functions.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>Types of Trigonometric Integrals</h3>
+                <p>We'll focus on integrals of the form:</p>
+                <ul>
+                    <li>∫sinⁿ(x)·cosᵐ(x) dx</li>
+                    <li>∫tanⁿ(x)·secᵐ(x) dx</li>
+                    <li>∫sin(ax)·cos(bx) dx</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Key Identities</h3>
+                <p>These identities are essential:</p>
+                
+                <div class="math-display">
+                    sin²(x) + cos²(x) = 1<br>
+                    sin²(x) = (1 - cos(2x))/2<br>
+                    cos²(x) = (1 + cos(2x))/2<br>
+                    sin(x)·cos(x) = sin(2x)/2
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Strategy for sinⁿ(x)·cosᵐ(x)</h3>
+                <p><strong>If n is odd:</strong> Save one sin(x), convert the rest to cos(x) using sin²(x) = 1 - cos²(x), then substitute u = cos(x)</p>
+                
+                <p><strong>If m is odd:</strong> Save one cos(x), convert the rest to sin(x) using cos²(x) = 1 - sin²(x), then substitute u = sin(x)</p>
+                
+                <p><strong>If both are even:</strong> Use power-reducing identities</p>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Trigonometric integrals appear everywhere in physics — wave motion, signal processing, and oscillations. Mastering these techniques is essential for engineering and science.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: ∫sin³(x)·cos(x) dx</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Identify the pattern</strong></p>
+                    <p>n = 3 (odd), m = 1 (odd)</p>
+                    <p>Since n is odd, save one sin(x) and convert the rest</p>
+                    
+                    <p><strong>Step 2: Rewrite</strong></p>
+                    <div class="math-display">
+                        ∫sin³(x)·cos(x) dx = ∫sin²(x)·sin(x)·cos(x) dx<br>
+                        = ∫(1 - cos²(x))·sin(x)·cos(x) dx
+                    </div>
+                    
+                    <p><strong>Step 3: Substitute</strong></p>
+                    <p>Let u = cos(x), then du = -sin(x) dx</p>
+                    <div class="math-display">
+                        = ∫(1 - u²)·u·(-du)<br>
+                        = -∫(u - u³) du<br>
+                        = -[u²/2 - u⁴/4] + C<br>
+                        = -cos²(x)/2 + cos⁴(x)/4 + C
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: ∫sin²(x) dx</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Identify the pattern</strong></p>
+                    <p>n = 2 (even), m = 0 (even)</p>
+                    <p>Both are even, so use power-reducing identity</p>
+                    
+                    <p><strong>Step 2: Apply identity</strong></p>
+                    <div class="math-display">
+                        ∫sin²(x) dx = ∫(1 - cos(2x))/2 dx<br>
+                        = (1/2)∫dx - (1/2)∫cos(2x) dx<br>
+                        = x/2 - sin(2x)/4 + C
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Integrating sinⁿ(x)·cosᵐ(x)</h4>
+                <ol>
+                    <li><strong>Check the powers</strong> — Is n odd? Is m odd? Are both even?</li>
+                    <li><strong>If n is odd:</strong> Save one sin(x), convert rest to cos(x), substitute u = cos(x)</li>
+                    <li><strong>If m is odd:</strong> Save one cos(x), convert rest to sin(x), substitute u = sin(x)</li>
+                    <li><strong>If both even:</strong> Use sin²(x) = (1-cos(2x))/2 and cos²(x) = (1+cos(2x))/2</li>
+                    <li><strong>Simplify</strong> — Expand and integrate term by term</li>
+                    <li><strong>Add +C</strong> — Don't forget the constant</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What identity would you use for ∫sin⁴(x) dx?</li>
+                    <li>For ∫sin⁵(x)·cos²(x) dx, what substitution would you use?</li>
+                    <li>When do you use power-reducing identities?</li>
+                    <li>What's the strategy when both powers are odd?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand trigonometric integrals, the next step is learning about <strong>trigonometric substitution</strong> — using trig functions to simplify square roots.</p>
+                <a href="lesson3.html" class="next-lesson-link">
+                    Next Lesson: Trigonometric Substitution →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>
