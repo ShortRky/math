@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion in Space - Calculus Volume 3 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 3</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 4: Motion in Space</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Motion in Space</h1>
+            <div class="lesson-meta">
+                <span>Chapter 2: Vector Functions</span>
+                <span>Lesson 4 of 7</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to analyze motion in space using position, velocity, and acceleration vectors.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Motion in space is described by position, velocity, and acceleration vectors that are related through differentiation.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>Position, Velocity, and Acceleration</h3>
+                <p>For a particle moving in space:</p>
+                
+                <div class="math-display">
+                    Position: r(t) = ⟨x(t), y(t), z(t)⟩<br>
+                    Velocity: v(t) = r'(t) = ⟨x'(t), y'(t), z'(t)⟩<br>
+                    Acceleration: a(t) = v'(t) = r''(t) = ⟨x''(t), y''(t), z''(t)⟩
+                </div>
+                
+                <div class="example-box">
+                    <h4>Relationships</h4>
+                    <div class="example-content">
+                        <ul>
+                            <li>Velocity is the derivative of position</li>
+                            <li>Acceleration is the derivative of velocity</li>
+                            <li>Speed is the magnitude of velocity: |v(t)|</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Finding Position from Velocity</h3>
+                <p>If you know velocity and initial position, you can find position:</p>
+                
+                <div class="math-display">
+                    r(t) = ∫v(t) dt + r₀
+                </div>
+                
+                <p>Where r₀ is the initial position.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Finding Position from Acceleration</h3>
+                <p>If you know acceleration, initial velocity, and initial position:</p>
+                
+                <div class="math-display">
+                    v(t) = ∫a(t) dt + v₀<br>
+                    r(t) = ∫v(t) dt + r₀
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Projectile Motion</h3>
+                <p>For projectile motion with initial velocity v₀ and angle θ:</p>
+                
+                <div class="math-display">
+                    x(t) = v₀ cos(θ) · t<br>
+                    y(t) = v₀ sin(θ) · t - (1/2)gt²
+                </div>
+                
+                <p>Where g is the acceleration due to gravity.</p>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Understanding motion in space is essential for physics, engineering, and computer graphics. It's the foundation for analyzing everything from projectiles to satellites to animations.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Finding Velocity and Acceleration</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> A particle has position r(t) = ⟨t², 2t, t³⟩. Find velocity and acceleration.</p>
+                    
+                    <p><strong>Step 1: Find velocity</strong></p>
+                    <div class="math-display">
+                        v(t) = r'(t) = ⟨2t, 2, 3t²⟩
+                    </div>
+                    
+                    <p><strong>Step 2: Find acceleration</strong></p>
+                    <div class="math-display">
+                        a(t) = v'(t) = ⟨2, 0, 6t⟩
+                    </div>
+                    
+                    <p><strong>Step 3: Find speed at t = 1</strong></p>
+                    <div class="math-display">
+                        v(1) = ⟨2, 2, 3⟩<br>
+                        Speed = |v(1)| = √(4 + 4 + 9) = √17 ≈ 4.12
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Finding Position from Velocity</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> A particle has velocity v(t) = ⟨2t, 3t², 1⟩ and starts at r(0) = ⟨1, 2, 3⟩. Find r(t).</p>
+                    
+                    <p><strong>Step 1: Integrate velocity</strong></p>
+                    <div class="math-display">
+                        r(t) = ∫v(t) dt = ⟨t² + C₁, t³ + C₂, t + C₃⟩
+                    </div>
+                    
+                    <p><strong>Step 2: Use initial condition</strong></p>
+                    <div class="math-display">
+                        r(0) = ⟨C₁, C₂, C₃⟩ = ⟨1, 2, 3⟩<br>
+                        C₁ = 1, C₂ = 2, C₃ = 3
+                    </div>
+                    
+                    <p><strong>Step 3: Write final answer</strong></p>
+                    <div class="math-display">
+                        r(t) = ⟨t² + 1, t³ + 2, t + 3⟩
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 3: Projectile Motion</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> A ball is thrown with initial velocity 50 m/s at 30°. Find the position at t = 2 seconds (g = 9.8 m/s²).</p>
+                    
+                    <p><strong>Step 1: Find initial velocity components</strong></p>
+                    <div class="math-display">
+                        v₀ₓ = 50 cos(30°) = 50 · (√3/2) ≈ 43.3 m/s<br>
+                        v₀ᵧ = 50 sin(30°) = 50 · (1/2) = 25 m/s
+                    </div>
+                    
+                    <p><strong>Step 2: Write position equations</strong></p>
+                    <div class="math-display">
+                        x(t) = 43.3t<br>
+                        y(t) = 25t - 4.9t²
+                    </div>
+                    
+                    <p><strong>Step 3: Evaluate at t = 2</strong></p>
+                    <div class="math-display">
+                        x(2) = 43.3 · 2 = 86.6 m<br>
+                        y(2) = 25 · 2 - 4.9 · 4 = 50 - 19.6 = 30.4 m
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Finding Velocity and Acceleration</h4>
+                <ol>
+                    <li><strong>Start with position</strong> — r(t) = ⟨x(t), y(t), z(t)⟩</li>
+                    <li><strong>Differentiate for velocity</strong> — v(t) = r'(t)</li>
+                    <li><strong>Differentiate again for acceleration</strong> — a(t) = v'(t)</li>
+                    <li><strong>Find speed if needed</strong> — |v(t)|</li>
+                    <li><strong>Evaluate at specific times</strong> — Plug in t values</li>
+                </ol>
+            </div>
+
+            <div class="step-guide">
+                <h4>Step-by-Step: Finding Position from Velocity</h4>
+                <ol>
+                    <li><strong>Integrate velocity</strong> — r(t) = ∫v(t) dt</li>
+                    <li><strong>Add constants</strong> — Include C₁, C₂, C₃</li>
+                    <li><strong>Use initial condition</strong> — r(t₀) = given position</li>
+                    <li><strong>Solve for constants</strong> — Find C₁, C₂, C₃</li>
+                    <li><strong>Write final answer</strong> — r(t) with all constants determined</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What is the relationship between position, velocity, and acceleration?</li>
+                    <li>How do you find position from velocity?</li>
+                    <li>What is speed?</li>
+                    <li>Write the equations for projectile motion</li>
+                    <li>If v(t) = ⟨1, 2t⟩ and r(0) = ⟨0, 0⟩, find r(t)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand motion in space, the next step is learning about <strong>partial derivatives</strong> — how to differentiate functions of multiple variables.</p>
+                <a href="lesson5.html" class="next-lesson-link">
+                    Next Lesson: Partial Derivatives →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

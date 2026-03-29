@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications of Series - Calculus Volume 2 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 2</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 7: Applications of Series</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Applications of Series</h1>
+            <div class="lesson-meta">
+                <span>Chapter 2: Sequences and Series</span>
+                <span>Lesson 7 of 7</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to use Taylor series to approximate functions, evaluate integrals, solve differential equations, and understand error bounds.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Taylor series are powerful tools for approximating functions and solving problems that are otherwise difficult or impossible.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>Why Use Series?</h3>
+                <p>Series allow us to:</p>
+                <ul>
+                    <li>Approximate functions that are hard to compute</li>
+                    <li>Evaluate integrals that don't have elementary antiderivatives</li>
+                    <li>Solve differential equations</li>
+                    <li>Understand the behavior of functions</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Approximating Functions</h3>
+                <p>We can use Taylor polynomials to approximate function values:</p>
+                
+                <div class="example-box">
+                    <h4>Example: Approximating e⁰·¹</h4>
+                    <div class="example-content">
+                        <p>Using the Taylor series for eˣ:</p>
+                        <div class="math-display">
+                            eˣ = 1 + x + x²/2! + x³/3! + x⁴/4! + ...
+                        </div>
+                        <p>For x = 0.1:</p>
+                        <div class="math-display">
+                            e⁰·¹ ≈ 1 + 0.1 + (0.1)²/2 + (0.1)³/6 + (0.1)⁴/24<br>
+                            = 1 + 0.1 + 0.005 + 0.000167 + 0.00000417<br>
+                            ≈ 1.105171
+                        </div>
+                        <p>Actual value: e⁰·¹ ≈ 1.105171</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Error Bounds</h3>
+                <p>How accurate is our approximation? The error is bounded by the next term:</p>
+                
+                <div class="math-display">
+                    |Error| ≤ |next term| = |f⁽ⁿ⁺¹⁾(c)(x-a)ⁿ⁺¹/(n+1)!|
+                </div>
+                
+                <p>Where c is between a and x.</p>
+                
+                <div class="example-box">
+                    <h4>Example: Error in Approximating e⁰·¹</h4>
+                    <div class="example-content">
+                        <p>Using 4 terms (degree 3 polynomial):</p>
+                        <div class="math-display">
+                            |Error| ≤ (0.1)⁵/5! = 0.000001/120 ≈ 0.0000000083
+                        </div>
+                        <p>Our approximation is accurate to at least 7 decimal places!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Evaluating Integrals</h3>
+                <p>Some integrals don't have elementary antiderivatives. We can use series to evaluate them.</p>
+                
+                <div class="example-box">
+                    <h4>Example: ∫eˣ² dx</h4>
+                    <div class="example-content">
+                        <p>This integral doesn't have an elementary antiderivative.</p>
+                        <p>Using the Taylor series for eˣ²:</p>
+                        <div class="math-display">
+                            eˣ² = 1 + x² + x⁴/2! + x⁶/3! + x⁸/4! + ...
+                        </div>
+                        <p>Integrate term by term:</p>
+                        <div class="math-display">
+                            ∫eˣ² dx = C + x + x³/3 + x⁵/(5·2!) + x⁷/(7·3!) + x⁹/(9·4!) + ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Solving Differential Equations</h3>
+                <p>Series can solve differential equations that are difficult to solve otherwise.</p>
+                
+                <div class="example-box">
+                    <h4>Example: y' = y, y(0) = 1</h4>
+                    <div class="example-content">
+                        <p>Assume y = ∑aₙxⁿ</p>
+                        <p>Then y' = ∑n·aₙxⁿ⁻¹</p>
+                        <p>Substituting into y' = y:</p>
+                        <div class="math-display">
+                            ∑n·aₙxⁿ⁻¹ = ∑aₙxⁿ
+                        </div>
+                        <p>Matching coefficients: aₙ₊₁ = aₙ/(n+1)</p>
+                        <p>With a₀ = 1: aₙ = 1/n!</p>
+                        <p>So y = ∑xⁿ/n! = eˣ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Series are essential tools in mathematics, science, and engineering. They allow us to solve problems that would otherwise be impossible and provide deep insights into the behavior of functions.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Approximating sin(0.5)</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Use the Taylor series for sin(x)</strong></p>
+                    <div class="math-display">
+                        sin(x) = x - x³/3! + x⁵/5! - x⁷/7! + ...
+                    </div>
+                    
+                    <p><strong>Step 2: Substitute x = 0.5</strong></p>
+                    <div class="math-display">
+                        sin(0.5) ≈ 0.5 - (0.5)³/6 + (0.5)⁵/120 - (0.5)⁷/5040<br>
+                        = 0.5 - 0.020833 + 0.000260 - 0.00000155<br>
+                        ≈ 0.479425
+                    </div>
+                    
+                    <p><strong>Step 3: Check error</strong></p>
+                    <div class="math-display">
+                        |Error| ≤ (0.5)⁹/9! ≈ 0.0000000068
+                    </div>
+                    <p>Actual value: sin(0.5) ≈ 0.479426</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Evaluating ∫sin(x)/x dx</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Use the Taylor series for sin(x)</strong></p>
+                    <div class="math-display">
+                        sin(x) = x - x³/3! + x⁵/5! - x⁷/7! + ...
+                    </div>
+                    
+                    <p><strong>Step 2: Divide by x</strong></p>
+                    <div class="math-display">
+                        sin(x)/x = 1 - x²/3! + x⁴/5! - x⁶/7! + ...
+                    </div>
+                    
+                    <p><strong>Step 3: Integrate term by term</strong></p>
+                    <div class="math-display">
+                        ∫sin(x)/x dx = C + x - x³/(3·3!) + x⁵/(5·5!) - x⁷/(7·7!) + ...
+                    </div>
+                    
+                    <p><strong>Step 4: Evaluate from 0 to 1</strong></p>
+                    <div class="math-display">
+                        ∫₀¹ sin(x)/x dx ≈ 1 - 1/(3·6) + 1/(5·120) - 1/(7·5040)<br>
+                        = 1 - 0.055556 + 0.001667 - 0.0000283<br>
+                        ≈ 0.946083
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 3: Solving y'' + y = 0</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Assume a power series solution</strong></p>
+                    <p>y = ∑aₙxⁿ</p>
+                    
+                    <p><strong>Step 2: Find derivatives</strong></p>
+                    <div class="math-display">
+                        y' = ∑n·aₙxⁿ⁻¹<br>
+                        y'' = ∑n(n-1)·aₙxⁿ⁻²
+                    </div>
+                    
+                    <p><strong>Step 3: Substitute into the equation</strong></p>
+                    <div class="math-display">
+                        ∑n(n-1)·aₙxⁿ⁻² + ∑aₙxⁿ = 0
+                    </div>
+                    
+                    <p><strong>Step 4: Match coefficients</strong></p>
+                    <p>For n ≥ 2: n(n-1)aₙ + aₙ₋₂ = 0</p>
+                    <p>So: aₙ = -aₙ₋₂/[n(n-1)]</p>
+                    
+                    <p><strong>Step 5: Find the pattern</strong></p>
+                    <p>With a₀ = 1, a₁ = 0:</p>
+                    <div class="math-display">
+                        y = 1 - x²/2! + x⁴/4! - x⁶/6! + ... = cos(x)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Approximating Function Values</h4>
+                <ol>
+                    <li><strong>Choose the series</strong> — Use a known Taylor series</li>
+                    <li><strong>Substitute x</strong> — Plug in the value you want</li>
+                    <li><strong>Add terms</strong> — Include enough terms for desired accuracy</li>
+                    <li><strong>Check error</strong> — Use the next term as a bound</li>
+                    <li><strong>State your answer</strong> — Include the approximation and error bound</li>
+                </ol>
+            </div>
+
+            <div class="step-guide">
+                <h4>Step-by-Step: Evaluating Integrals with Series</h4>
+                <ol>
+                    <li><strong>Find the series</strong> — Expand the integrand</li>
+                    <li><strong>Integrate term by term</strong> — Apply ∫ to each term</li>
+                    <li><strong>Add the constant</strong> — Don't forget +C</li>
+                    <li><strong>Evaluate if needed</strong> — Plug in limits</li>
+                    <li><strong>Check convergence</strong> — Make sure the series converges</li>
+                </ol>
+            </div>
+
+            <div class="step-guide">
+                <h4>Step-by-Step: Solving Differential Equations</h4>
+                <ol>
+                    <li><strong>Assume a series</strong> — Let y = ∑aₙxⁿ</li>
+                    <li><strong>Find derivatives</strong> — Compute y', y'', etc.</li>
+                    <li><strong>Substitute</strong> — Plug into the differential equation</li>
+                    <li><strong>Match coefficients</strong> — Set up recurrence relations</li>
+                    <li><strong>Solve for aₙ</strong> — Find the pattern</li>
+                    <li><strong>Write the solution</strong> — Express as a series</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>How do you approximate a function value using Taylor series?</li>
+                    <li>How do you bound the error in a Taylor approximation?</li>
+                    <li>How do you evaluate ∫eˣ² dx using series?</li>
+                    <li>What is the Taylor series for sin(x)?</li>
+                    <li>How do you solve a differential equation using series?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Congratulations! You've completed Chapter 2 on Sequences and Series. You now understand how to work with infinite processes and approximate functions.</p>
+                <p>Next, you'll move on to <strong>Chapter 3: Parametric Equations</strong>, where you'll learn about curves defined by parameters.</p>
+                <a href="../ch3/lesson1.html" class="next-lesson-link">
+                    Next Chapter: Parametric Equations →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cylindrical and Spherical Coordinates - Calculus Volume 3 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 3</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 6: Cylindrical and Spherical Coordinates</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Cylindrical and Spherical Coordinates</h1>
+            <div class="lesson-meta">
+                <span>Chapter 1: Vectors and the Geometry of Space</span>
+                <span>Lesson 6 of 6</span>
+                <span>⏱️ 40-50 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to use cylindrical and spherical coordinates to describe points in 3D space.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Cylindrical and spherical coordinates provide alternative ways to describe 3D space that are often more convenient than Cartesian coordinates.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>Why Use Different Coordinates?</h3>
+                <p>Some problems are easier to solve in different coordinate systems. For example:</p>
+                <ul>
+                    <li><strong>Cylindrical coordinates</strong> are great for problems with cylindrical symmetry</li>
+                    <li><strong>Spherical coordinates</strong> are great for problems with spherical symmetry</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Cylindrical Coordinates</h3>
+                <p>Cylindrical coordinates use (r, θ, z) where:</p>
+                <ul>
+                    <li><strong>r</strong> = distance from the z-axis (like polar coordinates)</li>
+                    <li><strong>θ</strong> = angle in the xy-plane from the positive x-axis</li>
+                    <li><strong>z</strong> = height (same as Cartesian z)</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Conversion Formulas</h4>
+                    <div class="example-content">
+                        <p>From cylindrical to Cartesian:</p>
+                        <div class="math-display">
+                            x = r cos(θ)<br>
+                            y = r sin(θ)<br>
+                            z = z
+                        </div>
+                        <p>From Cartesian to cylindrical:</p>
+                        <div class="math-display">
+                            r = √(x² + y²)<br>
+                            θ = arctan(y/x)<br>
+                            z = z
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Spherical Coordinates</h3>
+                <p>Spherical coordinates use (ρ, θ, φ) where:</p>
+                <ul>
+                    <li><strong>ρ</strong> = distance from the origin</li>
+                    <li><strong>θ</strong> = angle in the xy-plane from the positive x-axis (same as cylindrical)</li>
+                    <li><strong>φ</strong> = angle from the positive z-axis (polar angle)</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Conversion Formulas</h4>
+                    <div class="example-content">
+                        <p>From spherical to Cartesian:</p>
+                        <div class="math-display">
+                            x = ρ sin(φ) cos(θ)<br>
+                            y = ρ sin(φ) sin(θ)<br>
+                            z = ρ cos(φ)
+                        </div>
+                        <p>From Cartesian to spherical:</p>
+                        <div class="math-display">
+                            ρ = √(x² + y² + z²)<br>
+                            θ = arctan(y/x)<br>
+                            φ = arccos(z/ρ)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Common Surfaces</h3>
+                <div class="example-box">
+                    <h4>In Cylindrical Coordinates</h4>
+                    <div class="example-content">
+                        <ul>
+                            <li>r = constant → cylinder</li>
+                            <li>θ = constant → half-plane</li>
+                            <li>z = constant → plane</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>In Spherical Coordinates</h4>
+                    <div class="example-content">
+                        <ul>
+                            <li>ρ = constant → sphere</li>
+                            <li>θ = constant → half-plane</li>
+                            <li>φ = constant → cone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Choosing the right coordinate system can make problems much easier to solve. This is essential in physics, engineering, and computer graphics where symmetry plays a key role.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Converting from Cartesian to Cylindrical</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Convert (3, 4, 5) to cylindrical coordinates</p>
+                    
+                    <p><strong>Step 1: Find r</strong></p>
+                    <div class="math-display">
+                        r = √(3² + 4²) = √(9 + 16) = √25 = 5
+                    </div>
+                    
+                    <p><strong>Step 2: Find θ</strong></p>
+                    <div class="math-display">
+                        θ = arctan(4/3) ≈ 53.13°
+                    </div>
+                    
+                    <p><strong>Step 3: Keep z</strong></p>
+                    <div class="math-display">
+                        z = 5
+                    </div>
+                    
+                    <p><strong>Step 4: Write the answer</strong></p>
+                    <div class="math-display">
+                        (r, θ, z) = (5, 53.13°, 5)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Converting from Cartesian to Spherical</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Convert (1, 1, √2) to spherical coordinates</p>
+                    
+                    <p><strong>Step 1: Find ρ</strong></p>
+                    <div class="math-display">
+                        ρ = √(1² + 1² + (√2)²) = √(1 + 1 + 2) = √4 = 2
+                    </div>
+                    
+                    <p><strong>Step 2: Find θ</strong></p>
+                    <div class="math-display">
+                        θ = arctan(1/1) = 45°
+                    </div>
+                    
+                    <p><strong>Step 3: Find φ</strong></p>
+                    <div class="math-display">
+                        φ = arccos(√2/2) = 45°
+                    </div>
+                    
+                    <p><strong>Step 4: Write the answer</strong></p>
+                    <div class="math-display">
+                        (ρ, θ, φ) = (2, 45°, 45°)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 3: Identifying a Surface</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Describe the surface r = 3 in cylindrical coordinates</p>
+                    
+                    <p><strong>Step 1: Understand what r = 3 means</strong></p>
+                    <p>This means the distance from the z-axis is always 3.</p>
+                    
+                    <p><strong>Step 2: Visualize</strong></p>
+                    <p>This is a cylinder of radius 3 centered on the z-axis.</p>
+                    
+                    <p><strong>Step 3: Write in Cartesian</strong></p>
+                    <div class="math-display">
+                        x² + y² = 9
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Converting Coordinates</h4>
+                <ol>
+                    <li><strong>Identify the system</strong> — What are you converting from and to?</li>
+                    <li><strong>Use the formulas</strong> — Apply the appropriate conversion formulas</li>
+                    <li><strong>Calculate each component</strong> — Find r, θ, z or ρ, θ, φ</li>
+                    <li><strong>Check your work</strong> — Convert back to verify</li>
+                    <li><strong>Write the answer</strong> — Use the correct notation</li>
+                </ol>
+            </div>
+
+            <div class="step-guide">
+                <h4>Step-by-Step: Identifying Surfaces</h4>
+                <ol>
+                    <li><strong>Look at the equation</strong> — Which coordinate is constant?</li>
+                    <li><strong>Think geometrically</strong> — What shape does this describe?</li>
+                    <li><strong>Visualize</strong> — Picture the surface in 3D</li>
+                    <li><strong>Convert if needed</strong> — Write in Cartesian for clarity</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What are the three coordinates in cylindrical coordinates?</li>
+                    <li>What are the three coordinates in spherical coordinates?</li>
+                    <li>Convert (1, 1, 0) to cylindrical coordinates</li>
+                    <li>What surface is described by ρ = 5?</li>
+                    <li>When would you use spherical coordinates instead of Cartesian?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Congratulations! You've completed Chapter 1 on Vectors and the Geometry of Space. You now have a solid foundation in 3D geometry.</p>
+                <p>Next, you'll move on to <strong>Chapter 2: Partial Derivatives</strong>, where you'll learn how to differentiate functions of multiple variables.</p>
+                <a href="../ch2/lesson1.html" class="next-lesson-link">
+                    Next Chapter: Partial Derivatives →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

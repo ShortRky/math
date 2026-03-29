@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improper Integrals - Calculus Volume 2 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 2</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 5: Improper Integrals</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Improper Integrals</h1>
+            <div class="lesson-meta">
+                <span>Chapter 1: Integration Techniques</span>
+                <span>Lesson 5 of 6</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <!-- Goal Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to evaluate integrals with infinite limits or discontinuous integrands.</p>
+            </div>
+            
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Improper integrals extend the concept of integration to functions with infinite limits or vertical asymptotes.
+            </div>
+        </section>
+
+        <!-- Idea Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            
+            <div class="content-block">
+                <h3>What Are Improper Integrals?</h3>
+                <p>Improper integrals are integrals where either:</p>
+                <ul>
+                    <li>The interval of integration is infinite (like ∫₁^∞ f(x) dx)</li>
+                    <li>The integrand has a vertical asymptote in the interval</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Example: Infinite Limit</h4>
+                    <div class="example-content">
+                        <p>∫₁^∞ 1/x² dx</p>
+                        <p>We can't evaluate this directly, so we use a limit:</p>
+                        <div class="math-display">
+                            ∫₁^∞ 1/x² dx = lim(b→∞) ∫₁^b 1/x² dx
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Types of Improper Integrals</h3>
+                <div class="example-box">
+                    <h4>Type 1: Infinite Limits</h4>
+                    <div class="example-content">
+                        <p>∫ₐ^∞ f(x) dx = lim(b→∞) ∫ₐ^b f(x) dx</p>
+                        <p>∫₋∞^b f(x) dx = lim(a→-∞) ∫ₐ^b f(x) dx</p>
+                        <p>∫₋∞^∞ f(x) dx = ∫₋∞^c f(x) dx + ∫c^∞ f(x) dx</p>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>Type 2: Discontinuous Integrands</h4>
+                    <div class="example-content">
+                        <p>If f has a vertical asymptote at x = c:</p>
+                        <p>∫ₐ^b f(x) dx = lim(t→c⁻) ∫ₐ^t f(x) dx + lim(t→c⁺) ∫ₜ^b f(x) dx</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Convergence and Divergence</h3>
+                <p>An improper integral <strong>converges</strong> if the limit exists and is finite.</p>
+                <p>An improper integral <strong>diverges</strong> if the limit is infinite or doesn't exist.</p>
+                
+                <div class="example-box">
+                    <h4>Example</h4>
+                    <div class="example-content">
+                        <p>∫₁^∞ 1/x² dx converges to 1</p>
+                        <p>∫₁^∞ 1/x dx diverges</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Improper integrals are essential for probability, physics, and engineering. They allow us to calculate areas and volumes that would otherwise be impossible to compute.</p>
+            </div>
+        </section>
+
+        <!-- Example Section -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            
+            <div class="example-box">
+                <h4>Example 1: Infinite Upper Limit</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Evaluate ∫₁^∞ 1/x² dx</p>
+                    
+                    <p><strong>Step 1: Write as a limit</strong></p>
+                    <div class="math-display">
+                        ∫₁^∞ 1/x² dx = lim(b→∞) ∫₁^b 1/x² dx
+                    </div>
+                    
+                    <p><strong>Step 2: Evaluate the definite integral</strong></p>
+                    <div class="math-display">
+                        ∫₁^b 1/x² dx = [-1/x]₁^b = -1/b - (-1/1) = 1 - 1/b
+                    </div>
+                    
+                    <p><strong>Step 3: Take the limit</strong></p>
+                    <div class="math-display">
+                        lim(b→∞) (1 - 1/b) = 1 - 0 = 1
+                    </div>
+                    
+                    <p><strong>Step 4: Conclusion</strong></p>
+                    <p>The integral converges to 1.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 2: Infinite Lower Limit</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Evaluate ∫₋∞^0 eˣ dx</p>
+                    
+                    <p><strong>Step 1: Write as a limit</strong></p>
+                    <div class="math-display">
+                        ∫₋∞^0 eˣ dx = lim(a→-∞) ∫ₐ^0 eˣ dx
+                    </div>
+                    
+                    <p><strong>Step 2: Evaluate the definite integral</strong></p>
+                    <div class="math-display">
+                        ∫ₐ^0 eˣ dx = [eˣ]ₐ^0 = e⁰ - eᵃ = 1 - eᵃ
+                    </div>
+                    
+                    <p><strong>Step 3: Take the limit</strong></p>
+                    <div class="math-display">
+                        lim(a→-∞) (1 - eᵃ) = 1 - 0 = 1
+                    </div>
+                    
+                    <p><strong>Step 4: Conclusion</strong></p>
+                    <p>The integral converges to 1.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 3: Discontinuous Integrand</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Evaluate ∫₀¹ 1/√x dx</p>
+                    
+                    <p><strong>Step 1: Identify the problem</strong></p>
+                    <p>The integrand 1/√x has a vertical asymptote at x = 0.</p>
+                    
+                    <p><strong>Step 2: Write as a limit</strong></p>
+                    <div class="math-display">
+                        ∫₀¹ 1/√x dx = lim(a→0⁺) ∫ₐ¹ 1/√x dx
+                    </div>
+                    
+                    <p><strong>Step 3: Evaluate the definite integral</strong></p>
+                    <div class="math-display">
+                        ∫ₐ¹ 1/√x dx = [2√x]ₐ¹ = 2√1 - 2√a = 2 - 2√a
+                    </div>
+                    
+                    <p><strong>Step 4: Take the limit</strong></p>
+                    <div class="math-display">
+                        lim(a→0⁺) (2 - 2√a) = 2 - 0 = 2
+                    </div>
+                    
+                    <p><strong>Step 5: Conclusion</strong></p>
+                    <p>The integral converges to 2.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            
+            <div class="step-guide">
+                <h4>Step-by-Step: Evaluating Improper Integrals</h4>
+                <ol>
+                    <li><strong>Identify the type</strong> — Infinite limit or discontinuity?</li>
+                    <li><strong>Write as a limit</strong> — Replace infinity or problematic point with a variable</li>
+                    <li><strong>Evaluate the definite integral</strong> — Use standard integration</li>
+                    <li><strong>Take the limit</strong> — Evaluate as the variable approaches its limit</li>
+                    <li><strong>State convergence</strong> — Does it converge or diverge?</li>
+                </ol>
+            </div>
+
+            <div class="step-guide">
+                <h4>Step-by-Step: Checking Convergence</h4>
+                <ol>
+                    <li><strong>Set up the limit</strong> — Write the improper integral as a limit</li>
+                    <li><strong>Evaluate</strong> — Find the antiderivative</li>
+                    <li><strong>Take the limit</strong> — See if it exists and is finite</li>
+                    <li><strong>Conclude</strong> — State whether it converges or diverges</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Check Yourself -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What is an improper integral?</li>
+                    <li>What are the two types of improper integrals?</li>
+                    <li>What does it mean for an integral to converge?</li>
+                    <li>Evaluate ∫₁^∞ 1/x³ dx</li>
+                    <li>When do you need to split an integral?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand improper integrals, the next step is learning about <strong>applications of integration</strong> — using integrals to solve real-world problems.</p>
+                <a href="lesson6.html" class="next-lesson-link">
+                    Next Lesson: Applications of Integration →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>
