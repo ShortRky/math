@@ -46,7 +46,7 @@
             <div class="lesson-meta">
                 <span>Chapter 2: Vector Functions</span>
                 <span>Lesson 5 of 7</span>
-                <span>⏱️ 35-45 minutes</span>
+                <span>⏱️ 40-50 minutes</span>
             </div>
         </div>
 
@@ -75,28 +75,17 @@
                 </div>
                 
                 <p>We treat y as a constant and differentiate with respect to x.</p>
-                
-                <div class="example-box">
-                    <h4>Example</h4>
-                    <div class="example-content">
-                        <p>For f(x, y) = x²y + 3xy²:</p>
-                        <div class="math-display">
-                            ∂f/∂x = 2xy + 3y² (treat y as constant)<br>
-                            ∂f/∂y = x² + 6xy (treat x as constant)
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="content-block">
                 <h3>Notation</h3>
-                <p>Partial derivatives can be written in several ways:</p>
+                <p>Partial derivatives can be written as:</p>
                 
                 <div class="math-display">
-                    ∂f/∂x = fₓ = D₁f = ∂z/∂x
+                    ∂f/∂x = fₓ = ∂z/∂x
                 </div>
                 
-                <p>All mean the same thing: the partial derivative of f with respect to x.</p>
+                <p>All three notations mean the same thing.</p>
             </div>
 
             <div class="content-block">
@@ -104,28 +93,13 @@
                 <p>You can take partial derivatives of partial derivatives:</p>
                 
                 <div class="math-display">
-                    ∂²f/∂x² = fₓₓ (second partial with respect to x)<br>
-                    ∂²f/∂y² = fᵧᵧ (second partial with respect to y)<br>
-                    ∂²f/∂x∂y = fₓᵧ (mixed partial: first x, then y)<br>
-                    ∂²f/∂y∂x = fᵧₓ (mixed partial: first y, then x)
+                    ∂²f/∂x² = fₓₓ<br>
+                    ∂²f/∂y² = fᵧᵧ<br>
+                    ∂²f/∂x∂y = fₓᵧ<br>
+                    ∂²f/∂y∂x = fᵧₓ
                 </div>
                 
-                <div class="example-box">
-                    <h4>Clairaut's Theorem</h4>
-                    <div class="example-content">
-                        <p>If fₓᵧ and fᵧₓ are continuous, then:</p>
-                        <div class="math-display">
-                            fₓᵧ = fᵧₓ
-                        </div>
-                        <p>The order of differentiation doesn't matter!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Geometric Meaning</h3>
-                <p>∂f/∂x gives the slope of the surface z = f(x, y) in the x-direction.</p>
-                <p>∂f/∂y gives the slope in the y-direction.</p>
+                <p>For most functions, fₓᵧ = fᵧₓ (Clairaut's theorem).</p>
             </div>
 
             <div class="why-box">
@@ -141,63 +115,60 @@
             <div class="example-box">
                 <h4>Example 1: Finding Partial Derivatives</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find ∂f/∂x and ∂f/∂y for f(x, y) = x³y² + 2xy + 5</p>
+                    <p><strong>Problem:</strong> Find ∂f/∂x and ∂f/∂y for f(x, y) = x²y + 3xy²</p>
                     
                     <p><strong>Step 1: Find ∂f/∂x</strong></p>
                     <p>Treat y as a constant:</p>
                     <div class="math-display">
-                        ∂f/∂x = 3x²y² + 2y
+                        ∂f/∂x = 2xy + 3y²
                     </div>
                     
                     <p><strong>Step 2: Find ∂f/∂y</strong></p>
                     <p>Treat x as a constant:</p>
                     <div class="math-display">
-                        ∂f/∂y = 2x³y + 2x
+                        ∂f/∂y = x² + 6xy
                     </div>
                 </div>
             </div>
 
             <div class="example-box">
-                <h4>Example 2: Finding Second Partial Derivatives</h4>
+                <h4>Example 2: Evaluating Partial Derivatives</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find all second partial derivatives of f(x, y) = x²y + xy³</p>
+                    <p><strong>Problem:</strong> Find fₓ(1, 2) for f(x, y) = x³y²</p>
+                    
+                    <p><strong>Step 1: Find fₓ</strong></p>
+                    <div class="math-display">
+                        fₓ = 3x²y²
+                    </div>
+                    
+                    <p><strong>Step 2: Evaluate at (1, 2)</strong></p>
+                    <div class="math-display">
+                        fₓ(1, 2) = 3(1)²(2)² = 3 · 1 · 4 = 12
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Example 3: Finding Second Partial Derivatives</h4>
+                <div class="example-content">
+                    <p><strong>Problem:</strong> Find all second partial derivatives of f(x, y) = x²y + y³</p>
                     
                     <p><strong>Step 1: Find first partials</strong></p>
                     <div class="math-display">
-                        fₓ = 2xy + y³<br>
-                        fᵧ = x² + 3xy²
+                        fₓ = 2xy<br>
+                        fᵧ = x² + 3y²
                     </div>
                     
                     <p><strong>Step 2: Find second partials</strong></p>
                     <div class="math-display">
                         fₓₓ = 2y<br>
-                        fᵧᵧ = 6xy<br>
-                        fₓᵧ = 2x + 3y²<br>
-                        fᵧₓ = 2x + 3y²
+                        fᵧᵧ = 6y<br>
+                        fₓᵧ = 2x<br>
+                        fᵧₓ = 2x
                     </div>
                     
                     <p><strong>Step 3: Verify Clairaut's theorem</strong></p>
-                    <p>fₓᵧ = fᵧₓ = 2x + 3y² ✓</p>
-                </div>
-            </div>
-
-            <div class="example-box">
-                <h4>Example 3: Evaluating Partial Derivatives at a Point</h4>
-                <div class="example-content">
-                    <p><strong>Problem:</strong> Find fₓ(1, 2) for f(x, y) = x²y + 3xy</p>
-                    
-                    <p><strong>Step 1: Find fₓ</strong></p>
-                    <div class="math-display">
-                        fₓ = 2xy + 3y
-                    </div>
-                    
-                    <p><strong>Step 2: Evaluate at (1, 2)</strong></p>
-                    <div class="math-display">
-                        fₓ(1, 2) = 2(1)(2) + 3(2) = 4 + 6 = 10
-                    </div>
-                    
-                    <p><strong>Step 3: Interpret</strong></p>
-                    <p>At the point (1, 2), the function increases by 10 units for each unit increase in x.</p>
+                    <p>fₓᵧ = fᵧₓ = 2x ✓</p>
                 </div>
             </div>
         </section>
@@ -239,7 +210,7 @@
                     <li>How do you find ∂f/∂x?</li>
                     <li>What is Clairaut's theorem?</li>
                     <li>Find ∂f/∂x for f(x, y) = x²y + y³</li>
-                    <li>What is the geometric meaning of ∂f/∂x?</li>
+                    <li>What are the four second partial derivatives?</li>
                 </ul>
             </div>
         </section>

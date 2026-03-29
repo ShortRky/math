@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equations of Lines and Planes - Calculus Volume 3 - MathLearn</title>
+    <title>Lines and Planes - Calculus Volume 3 - MathLearn</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
                     <a href="../index.html" class="breadcrumb-link">Calculus Volume 3</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <span class="breadcrumb-current">Lesson 5: Equations of Lines and Planes</span>
+                    <span class="breadcrumb-current">Lesson 5: Lines and Planes</span>
                 </li>
             </ol>
         </div>
@@ -42,7 +42,7 @@
 
     <main class="lesson-container">
         <div class="lesson-header">
-            <h1 class="lesson-title">Equations of Lines and Planes</h1>
+            <h1 class="lesson-title">Lines and Planes</h1>
             <div class="lesson-meta">
                 <span>Chapter 1: Vectors and the Geometry of Space</span>
                 <span>Lesson 5 of 6</span>
@@ -54,11 +54,11 @@
         <section class="lesson-section">
             <h2><span class="section-icon">🎯</span> Goal</h2>
             <div class="goal-box">
-                <p>Learn how to write equations for lines and planes in 3D space using vectors.</p>
+                <p>Learn how to write equations for lines and planes in three-dimensional space.</p>
             </div>
             
             <div class="one-sentence">
-                <strong>In one sentence:</strong> Vectors give us powerful ways to describe lines and planes in three-dimensional space.
+                <strong>In one sentence:</strong> Lines and planes in 3D can be described using vectors, points, and equations.
             </div>
         </section>
 
@@ -68,102 +68,75 @@
             
             <div class="content-block">
                 <h3>Equations of Lines</h3>
-                <p>A line in 3D can be described using a point and a direction vector.</p>
+                <p>A line can be described in several ways:</p>
                 
                 <div class="example-box">
-                    <h4>Vector Equation of a Line</h4>
+                    <h4>Vector Equation</h4>
                     <div class="example-content">
-                        <p>If a line passes through point P₀(x₀, y₀, z₀) and has direction vector v = ⟨a, b, c⟩:</p>
-                        <div class="math-display">
-                            r = r₀ + tv
-                        </div>
-                        <p>Where r = ⟨x, y, z⟩ and r₀ = ⟨x₀, y₀, z₀⟩</p>
+                        <p>r = r₀ + tv</p>
+                        <p>Where r₀ is a point on the line and v is the direction vector.</p>
                     </div>
                 </div>
 
                 <div class="example-box">
                     <h4>Parametric Equations</h4>
                     <div class="example-content">
-                        <p>The vector equation gives us three parametric equations:</p>
-                        <div class="math-display">
-                            x = x₀ + at<br>
-                            y = y₀ + bt<br>
-                            z = z₀ + ct
-                        </div>
-                        <p>Where t is the parameter.</p>
+                        <p>x = x₀ + at</p>
+                        <p>y = y₀ + bt</p>
+                        <p>z = z₀ + ct</p>
                     </div>
                 </div>
 
                 <div class="example-box">
                     <h4>Symmetric Equations</h4>
                     <div class="example-content">
-                        <p>If a, b, c are all nonzero:</p>
-                        <div class="math-display">
-                            (x - x₀)/a = (y - y₀)/b = (z - z₀)/c
-                        </div>
+                        <p>(x - x₀)/a = (y - y₀)/b = (z - z₀)/c</p>
                     </div>
                 </div>
             </div>
 
             <div class="content-block">
                 <h3>Equations of Planes</h3>
-                <p>A plane in 3D can be described using a point and a normal vector.</p>
+                <p>A plane can be described in several ways:</p>
                 
                 <div class="example-box">
-                    <h4>Vector Equation of a Plane</h4>
+                    <h4>Point-Normal Form</h4>
                     <div class="example-content">
-                        <p>If a plane passes through point P₀(x₀, y₀, z₀) and has normal vector n = ⟨a, b, c⟩:</p>
-                        <div class="math-display">
-                            n · (r - r₀) = 0
-                        </div>
-                        <p>Where r = ⟨x, y, z⟩ and r₀ = ⟨x₀, y₀, z₀⟩</p>
+                        <p>n · (r - r₀) = 0</p>
+                        <p>Where n is the normal vector and r₀ is a point on the plane.</p>
                     </div>
                 </div>
 
                 <div class="example-box">
-                    <h4>Scalar Equation of a Plane</h4>
+                    <h4>General Form</h4>
                     <div class="example-content">
-                        <p>The vector equation simplifies to:</p>
-                        <div class="math-display">
-                            a(x - x₀) + b(y - y₀) + c(z - z₀) = 0
-                        </div>
-                        <p>Or:</p>
-                        <div class="math-display">
-                            ax + by + cz = d
-                        </div>
-                        <p>Where d = ax₀ + by₀ + cz₀</p>
+                        <p>ax + by + cz = d</p>
+                        <p>Where ⟨a, b, c⟩ is the normal vector.</p>
                     </div>
                 </div>
             </div>
 
             <div class="content-block">
                 <h3>Finding the Normal Vector</h3>
-                <p>The normal vector to a plane can be found using the cross product of two vectors in the plane.</p>
+                <p>If you have two vectors in the plane, the normal vector is:</p>
                 
-                <div class="example-box">
-                    <h4>Example</h4>
-                    <div class="example-content">
-                        <p>If you have two vectors u and v in the plane:</p>
-                        <div class="math-display">
-                            n = u × v
-                        </div>
-                        <p>This gives a vector perpendicular to both u and v, hence perpendicular to the plane.</p>
-                    </div>
+                <div class="math-display">
+                    n = u × v
                 </div>
             </div>
 
             <div class="content-block">
                 <h3>Distance from a Point to a Plane</h3>
-                <p>The distance from point P(x₁, y₁, z₁) to the plane ax + by + cz = d is:</p>
+                <p>The distance from point P to the plane ax + by + cz = d is:</p>
                 
                 <div class="math-display">
-                    D = |ax₁ + by₁ + cz₁ - d| / √(a² + b² + c²)
+                    D = |ax₀ + by₀ + cz₀ - d| / √(a² + b² + c²)
                 </div>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>Understanding lines and planes in 3D is essential for computer graphics, robotics, physics, and engineering. These equations form the foundation for more complex geometry.</p>
+                <p>Understanding lines and planes is essential for 3D geometry, computer graphics, physics, and engineering. These concepts form the foundation for more advanced topics.</p>
             </div>
         </section>
 
@@ -200,18 +173,15 @@
                 <div class="example-content">
                     <p><strong>Problem:</strong> Find the equation of the plane through (1, 2, 3) with normal vector ⟨4, 5, 6⟩</p>
                     
-                    <p><strong>Step 1: Use the scalar equation</strong></p>
+                    <p><strong>Step 1: Use the point-normal form</strong></p>
                     <div class="math-display">
-                        a(x - x₀) + b(y - y₀) + c(z - z₀) = 0
+                        n · (r - r₀) = 0<br>
+                        ⟨4, 5, 6⟩ · ⟨x - 1, y - 2, z - 3⟩ = 0
                     </div>
                     
-                    <p><strong>Step 2: Substitute</strong></p>
+                    <p><strong>Step 2: Expand</strong></p>
                     <div class="math-display">
-                        4(x - 1) + 5(y - 2) + 6(z - 3) = 0
-                    </div>
-                    
-                    <p><strong>Step 3: Simplify</strong></p>
-                    <div class="math-display">
+                        4(x - 1) + 5(y - 2) + 6(z - 3) = 0<br>
                         4x - 4 + 5y - 10 + 6z - 18 = 0<br>
                         4x + 5y + 6z = 32
                     </div>
@@ -224,11 +194,6 @@
                     <p><strong>Problem:</strong> Find the distance from (1, 2, 3) to the plane 2x + 3y + 4z = 10</p>
                     
                     <p><strong>Step 1: Use the distance formula</strong></p>
-                    <div class="math-display">
-                        D = |ax₁ + by₁ + cz₁ - d| / √(a² + b² + c²)
-                    </div>
-                    
-                    <p><strong>Step 2: Substitute</strong></p>
                     <div class="math-display">
                         D = |2(1) + 3(2) + 4(3) - 10| / √(2² + 3² + 4²)<br>
                         = |2 + 6 + 12 - 10| / √(4 + 9 + 16)<br>
@@ -246,8 +211,8 @@
             <div class="step-guide">
                 <h4>Step-by-Step: Finding the Equation of a Line</h4>
                 <ol>
-                    <li><strong>Identify a point</strong> — Find P₀(x₀, y₀, z₀) on the line</li>
-                    <li><strong>Find the direction vector</strong> — Determine v = ⟨a, b, c⟩</li>
+                    <li><strong>Identify a point</strong> — Find a point on the line</li>
+                    <li><strong>Find the direction vector</strong> — Determine the direction</li>
                     <li><strong>Write the vector equation</strong> — r = r₀ + tv</li>
                     <li><strong>Write parametric equations</strong> — x = x₀ + at, etc.</li>
                     <li><strong>Write symmetric equations</strong> — (x - x₀)/a = (y - y₀)/b = (z - z₀)/c</li>
@@ -257,10 +222,10 @@
             <div class="step-guide">
                 <h4>Step-by-Step: Finding the Equation of a Plane</h4>
                 <ol>
-                    <li><strong>Identify a point</strong> — Find P₀(x₀, y₀, z₀) on the plane</li>
-                    <li><strong>Find the normal vector</strong> — Determine n = ⟨a, b, c⟩</li>
-                    <li><strong>Use the scalar equation</strong> — a(x - x₀) + b(y - y₀) + c(z - z₀) = 0</li>
-                    <li><strong>Simplify</strong> — Write in the form ax + by + cz = d</li>
+                    <li><strong>Identify a point</strong> — Find a point on the plane</li>
+                    <li><strong>Find the normal vector</strong> — Use given vector or cross product</li>
+                    <li><strong>Write point-normal form</strong> — n · (r - r₀) = 0</li>
+                    <li><strong>Expand to general form</strong> — ax + by + cz = d</li>
                 </ol>
             </div>
         </section>
@@ -272,11 +237,11 @@
             <div class="check-yourself">
                 <h4>Test Your Understanding</h4>
                 <ul>
-                    <li>What is the vector equation of a line?</li>
-                    <li>What is the normal vector to a plane?</li>
+                    <li>What are the different ways to write the equation of a line?</li>
+                    <li>What is the point-normal form of a plane?</li>
+                    <li>How do you find the normal vector to a plane?</li>
                     <li>How do you find the distance from a point to a plane?</li>
-                    <li>What are parametric equations?</li>
-                    <li>How do you find the equation of a plane given three points?</li>
+                    <li>Write the equation of the plane through (0, 0, 0) with normal ⟨1, 1, 1⟩</li>
                 </ul>
             </div>
         </section>

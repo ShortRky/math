@@ -68,81 +68,55 @@
             
             <div class="content-block">
                 <h3>What is the Cross Product?</h3>
-                <p>The <strong>cross product</strong> of two vectors in 3D gives a new vector that is perpendicular to both original vectors.</p>
+                <p>The <strong>cross product</strong> of two vectors is a vector that is perpendicular to both original vectors.</p>
                 
                 <div class="math-display">
-                    If a = ⟨a₁, a₂, a₃⟩ and b = ⟨b₁, b₂, b₃⟩, then:<br>
-                    a × b = ⟨a₂b₃ - a₃b₂, a₃b₁ - a₁b₃, a₁b₂ - a₂b₁⟩
+                    u × v = ⟨u₂v₃ - u₃v₂, u₃v₁ - u₁v₃, u₁v₂ - u₂v₁⟩
                 </div>
                 
-                <div class="example-box">
-                    <h4>Example</h4>
-                    <div class="example-content">
-                        <p>If a = ⟨1, 2, 3⟩ and b = ⟨4, 5, 6⟩:</p>
-                        <div class="math-display">
-                            a × b = ⟨(2)(6) - (3)(5), (3)(4) - (1)(6), (1)(5) - (2)(4)⟩<br>
-                            = ⟨12 - 15, 12 - 6, 5 - 8⟩<br>
-                            = ⟨-3, 6, -3⟩
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Geometric Interpretation</h3>
-                <p>The cross product has important geometric properties:</p>
+                <p>Or using the determinant:</p>
                 
                 <div class="math-display">
-                    |a × b| = |a| |b| sin(θ)
+                    u × v = |i  j  k |
+                            |u₁ u₂ u₃|
+                            |v₁ v₂ v₃|
                 </div>
-                
-                <p>Where θ is the angle between the vectors.</p>
-                
-                <div class="example-box">
-                    <h4>What This Means</h4>
-                    <div class="example-content">
-                        <ul>
-                            <li>The magnitude |a × b| equals the area of the parallelogram formed by a and b</li>
-                            <li>The direction of a × b is perpendicular to both a and b</li>
-                            <li>The direction follows the right-hand rule</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>The Right-Hand Rule</h3>
-                <p>To determine the direction of a × b:</p>
-                <ol>
-                    <li>Point your fingers in the direction of a</li>
-                    <li>Curl your fingers toward b</li>
-                    <li>Your thumb points in the direction of a × b</li>
-                </ol>
             </div>
 
             <div class="content-block">
                 <h3>Properties of the Cross Product</h3>
                 <ul>
-                    <li><strong>Anti-commutative:</strong> a × b = -(b × a)</li>
-                    <li><strong>Not associative:</strong> (a × b) × c ≠ a × (b × c)</li>
-                    <li><strong>Distributive:</strong> a × (b + c) = a × b + a × c</li>
-                    <li><strong>Parallel test:</strong> a × b = 0 if and only if a is parallel to b</li>
+                    <li><strong>Anti-commutative:</strong> u × v = -(v × u)</li>
+                    <li><strong>Not associative:</strong> (u × v) × w ≠ u × (v × w)</li>
+                    <li><strong>Distributive:</strong> u × (v + w) = u × v + u × w</li>
+                    <li><strong>Parallel vectors:</strong> u × v = 0 if and only if u ∥ v</li>
                 </ul>
             </div>
 
             <div class="content-block">
-                <h3>Cross Product of Unit Vectors</h3>
+                <h3>Geometric Meaning</h3>
+                <p>The magnitude of the cross product is:</p>
+                
                 <div class="math-display">
-                    i × j = k<br>
-                    j × k = i<br>
-                    k × i = j<br>
-                    i × i = j × j = k × k = 0
+                    |u × v| = |u||v|sin(θ)
                 </div>
+                
+                <p>This equals the area of the parallelogram formed by u and v.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Right-Hand Rule</h3>
+                <p>The direction of u × v follows the right-hand rule:</p>
+                <ol>
+                    <li>Point your fingers in the direction of u</li>
+                    <li>Curl them toward v</li>
+                    <li>Your thumb points in the direction of u × v</li>
+                </ol>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>The cross product is essential in physics (torque, angular momentum), engineering (finding normal vectors), and computer graphics (lighting, surface orientation). It's the key to understanding 3D geometry.</p>
+                <p>The cross product is essential for finding normal vectors, calculating torque, determining if vectors are parallel, and many applications in physics and engineering.</p>
             </div>
         </section>
 
@@ -153,64 +127,67 @@
             <div class="example-box">
                 <h4>Example 1: Computing the Cross Product</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find a × b for a = ⟨1, 0, 0⟩ and b = ⟨0, 1, 0⟩</p>
+                    <p><strong>Problem:</strong> Find u × v for u = ⟨1, 2, 3⟩ and v = ⟨4, 5, 6⟩</p>
                     
-                    <p><strong>Step 1: Set up the formula</strong></p>
+                    <p><strong>Step 1: Set up the determinant</strong></p>
                     <div class="math-display">
-                        a × b = ⟨a₂b₃ - a₃b₂, a₃b₁ - a₁b₃, a₁b₂ - a₂b₁⟩
+                        u × v = |i  j  k |
+                                |1  2  3|
+                                |4  5  6|
                     </div>
                     
-                    <p><strong>Step 2: Substitute</strong></p>
+                    <p><strong>Step 2: Expand the determinant</strong></p>
                     <div class="math-display">
-                        a × b = ⟨(0)(0) - (0)(1), (0)(0) - (1)(0), (1)(1) - (0)(0)⟩<br>
-                        = ⟨0 - 0, 0 - 0, 1 - 0⟩<br>
-                        = ⟨0, 0, 1⟩
+                        = i(2·6 - 3·5) - j(1·6 - 3·4) + k(1·5 - 2·4)<br>
+                        = i(12 - 15) - j(6 - 12) + k(5 - 8)<br>
+                        = -3i + 6j - 3k
                     </div>
                     
-                    <p><strong>Step 3: Interpret</strong></p>
-                    <p>The result is k, which is perpendicular to both i and j.</p>
+                    <p><strong>Step 3: Write in component form</strong></p>
+                    <div class="math-display">
+                        u × v = ⟨-3, 6, -3⟩
+                    </div>
                 </div>
             </div>
 
             <div class="example-box">
                 <h4>Example 2: Finding the Area of a Parallelogram</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find the area of the parallelogram formed by a = ⟨1, 2, 3⟩ and b = ⟨4, 5, 6⟩</p>
+                    <p><strong>Problem:</strong> Find the area of the parallelogram formed by u = ⟨1, 0, 0⟩ and v = ⟨0, 1, 0⟩</p>
                     
-                    <p><strong>Step 1: Compute a × b</strong></p>
+                    <p><strong>Step 1: Find u × v</strong></p>
                     <div class="math-display">
-                        a × b = ⟨(2)(6) - (3)(5), (3)(4) - (1)(6), (1)(5) - (2)(4)⟩<br>
-                        = ⟨12 - 15, 12 - 6, 5 - 8⟩<br>
-                        = ⟨-3, 6, -3⟩
+                        u × v = |i  j  k |
+                                |1  0  0|
+                                |0  1  0|<br>
+                        = i(0 - 0) - j(0 - 0) + k(1 - 0)<br>
+                        = ⟨0, 0, 1⟩
                     </div>
                     
                     <p><strong>Step 2: Find the magnitude</strong></p>
                     <div class="math-display">
-                        |a × b| = √((-3)² + 6² + (-3)²) = √(9 + 36 + 9) = √54 = 3√6
+                        |u × v| = √(0² + 0² + 1²) = 1
                     </div>
                     
                     <p><strong>Step 3: Interpret</strong></p>
-                    <p>The area of the parallelogram is 3√6 ≈ 7.35 square units.</p>
+                    <p>The area of the parallelogram is 1 square unit.</p>
                 </div>
             </div>
 
             <div class="example-box">
                 <h4>Example 3: Finding a Normal Vector</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find a vector perpendicular to both a = ⟨1, 2, 1⟩ and b = ⟨2, -1, 1⟩</p>
+                    <p><strong>Problem:</strong> Find a vector perpendicular to both u = ⟨1, 2, 3⟩ and v = ⟨4, 5, 6⟩</p>
                     
-                    <p><strong>Step 1: Compute a × b</strong></p>
+                    <p><strong>Step 1: Compute u × v</strong></p>
                     <div class="math-display">
-                        a × b = ⟨(2)(1) - (1)(-1), (1)(2) - (1)(1), (1)(-1) - (2)(2)⟩<br>
-                        = ⟨2 + 1, 2 - 1, -1 - 4⟩<br>
-                        = ⟨3, 1, -5⟩
+                        u × v = ⟨-3, 6, -3⟩
                     </div>
                     
-                    <p><strong>Step 2: Verify</strong></p>
-                    <p>Check that (a × b) · a = 0 and (a × b) · b = 0:</p>
+                    <p><strong>Step 2: Verify perpendicularity</strong></p>
                     <div class="math-display">
-                        ⟨3, 1, -5⟩ · ⟨1, 2, 1⟩ = 3 + 2 - 5 = 0 ✓<br>
-                        ⟨3, 1, -5⟩ · ⟨2, -1, 1⟩ = 6 - 1 - 5 = 0 ✓
+                        (u × v) · u = (-3)(1) + (6)(2) + (-3)(3) = -3 + 12 - 9 = 0 ✓<br>
+                        (u × v) · v = (-3)(4) + (6)(5) + (-3)(6) = -12 + 30 - 18 = 0 ✓
                     </div>
                 </div>
             </div>
@@ -223,20 +200,19 @@
             <div class="step-guide">
                 <h4>Step-by-Step: Computing the Cross Product</h4>
                 <ol>
-                    <li><strong>Write the vectors</strong> — Make sure they're in 3D</li>
-                    <li><strong>Set up the formula</strong> — Use the determinant or component formula</li>
-                    <li><strong>Compute each component</strong> — Calculate a₂b₃ - a₃b₂, etc.</li>
-                    <li><strong>Simplify</strong> — Get your final vector</li>
-                    <li><strong>Check direction</strong> — Use the right-hand rule if needed</li>
+                    <li><strong>Set up the determinant</strong> — Write i, j, k in the first row</li>
+                    <li><strong>Expand the determinant</strong> — Use cofactor expansion</li>
+                    <li><strong>Simplify</strong> — Combine like terms</li>
+                    <li><strong>Write in component form</strong> — ⟨result₁, result₂, result₃⟩</li>
                 </ol>
             </div>
 
             <div class="step-guide">
-                <h4>Step-by-Step: Finding the Area of a Parallelogram</h4>
+                <h4>Step-by-Step: Finding Area of Parallelogram</h4>
                 <ol>
-                    <li><strong>Compute a × b</strong> — Find the cross product</li>
-                    <li><strong>Find the magnitude</strong> — Compute |a × b|</li>
-                    <li><strong>State the answer</strong> — The magnitude is the area</li>
+                    <li><strong>Find u × v</strong> — Compute the cross product</li>
+                    <li><strong>Find |u × v|</strong> — Compute the magnitude</li>
+                    <li><strong>Interpret</strong> — The magnitude is the area</li>
                 </ol>
             </div>
         </section>
@@ -248,11 +224,11 @@
             <div class="check-yourself">
                 <h4>Test Your Understanding</h4>
                 <ul>
-                    <li>What is the cross product of i and j?</li>
-                    <li>If a × b = 0, what does that mean?</li>
-                    <li>How do you find the area of a parallelogram using vectors?</li>
+                    <li>What is the cross product formula?</li>
+                    <li>When is u × v = 0?</li>
+                    <li>What does |u × v| represent?</li>
                     <li>What is the right-hand rule?</li>
-                    <li>Is the cross product commutative?</li>
+                    <li>Find the cross product of ⟨1, 0, 0⟩ and ⟨0, 1, 0⟩</li>
                 </ul>
             </div>
         </section>
@@ -263,9 +239,9 @@
             
             <div class="whats-next">
                 <h4>Continue Your Learning</h4>
-                <p>Now that you understand the cross product, the next step is learning about <strong>equations of lines and planes</strong> in 3D space.</p>
+                <p>Now that you understand the cross product, the next step is learning about <strong>lines and planes</strong> in three-dimensional space.</p>
                 <a href="lesson5.html" class="next-lesson-link">
-                    Next Lesson: Equations of Lines and Planes →
+                    Next Lesson: Lines and Planes →
                 </a>
             </div>
         </section>

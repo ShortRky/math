@@ -75,55 +75,43 @@
                     Velocity: v(t) = r'(t) = ⟨x'(t), y'(t), z'(t)⟩<br>
                     Acceleration: a(t) = v'(t) = r''(t) = ⟨x''(t), y''(t), z''(t)⟩
                 </div>
-                
-                <div class="example-box">
-                    <h4>Relationships</h4>
-                    <div class="example-content">
-                        <ul>
-                            <li>Velocity is the derivative of position</li>
-                            <li>Acceleration is the derivative of velocity</li>
-                            <li>Speed is the magnitude of velocity: |v(t)|</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             <div class="content-block">
-                <h3>Finding Position from Velocity</h3>
-                <p>If you know velocity and initial position, you can find position:</p>
+                <h3>Speed</h3>
+                <p>The speed is the magnitude of the velocity:</p>
                 
                 <div class="math-display">
-                    r(t) = ∫v(t) dt + r₀
-                </div>
-                
-                <p>Where r₀ is the initial position.</p>
-            </div>
-
-            <div class="content-block">
-                <h3>Finding Position from Acceleration</h3>
-                <p>If you know acceleration, initial velocity, and initial position:</p>
-                
-                <div class="math-display">
-                    v(t) = ∫a(t) dt + v₀<br>
-                    r(t) = ∫v(t) dt + r₀
+                    Speed = |v(t)| = √[(x'(t))² + (y'(t))² + (z'(t))²]
                 </div>
             </div>
 
             <div class="content-block">
                 <h3>Projectile Motion</h3>
-                <p>For projectile motion with initial velocity v₀ and angle θ:</p>
+                <p>For a projectile launched with initial velocity v₀ at angle θ:</p>
                 
                 <div class="math-display">
-                    x(t) = v₀ cos(θ) · t<br>
-                    y(t) = v₀ sin(θ) · t - (1/2)gt²
+                    x(t) = v₀ cos(θ) t<br>
+                    y(t) = v₀ sin(θ) t - (1/2)gt²
                 </div>
                 
                 <p>Where g is the acceleration due to gravity.</p>
             </div>
 
+            <div class="content-block">
+                <h3>Circular Motion</h3>
+                <p>For uniform circular motion with radius r and angular velocity ω:</p>
+                
+                <div class="math-display">
+                    r(t) = ⟨r cos(ωt), r sin(ωt)⟩<br>
+                    v(t) = ⟨-rω sin(ωt), rω cos(ωt)⟩<br>
+                    a(t) = ⟨-rω² cos(ωt), -rω² sin(ωt)⟩
+                </div>
+            </div>
+
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>Understanding motion in space is essential for physics, engineering, and computer graphics. It's the foundation for analyzing everything from projectiles to satellites to animations.</p>
+                <p>Understanding motion in space is essential for physics, engineering, and computer graphics. It allows us to predict trajectories, design orbits, and simulate realistic motion.</p>
             </div>
         </section>
 
@@ -134,45 +122,40 @@
             <div class="example-box">
                 <h4>Example 1: Finding Velocity and Acceleration</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> A particle has position r(t) = ⟨t², 2t, t³⟩. Find velocity and acceleration.</p>
+                    <p><strong>Problem:</strong> A particle has position r(t) = ⟨t², 2t, t³⟩. Find the velocity and acceleration at t = 1.</p>
                     
-                    <p><strong>Step 1: Find velocity</strong></p>
+                    <p><strong>Step 1: Find the velocity</strong></p>
                     <div class="math-display">
                         v(t) = r'(t) = ⟨2t, 2, 3t²⟩
                     </div>
                     
-                    <p><strong>Step 2: Find acceleration</strong></p>
+                    <p><strong>Step 2: Find the acceleration</strong></p>
                     <div class="math-display">
                         a(t) = v'(t) = ⟨2, 0, 6t⟩
                     </div>
                     
-                    <p><strong>Step 3: Find speed at t = 1</strong></p>
+                    <p><strong>Step 3: Evaluate at t = 1</strong></p>
                     <div class="math-display">
                         v(1) = ⟨2, 2, 3⟩<br>
-                        Speed = |v(1)| = √(4 + 4 + 9) = √17 ≈ 4.12
+                        a(1) = ⟨2, 0, 6⟩
                     </div>
                 </div>
             </div>
 
             <div class="example-box">
-                <h4>Example 2: Finding Position from Velocity</h4>
+                <h4>Example 2: Finding Speed</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> A particle has velocity v(t) = ⟨2t, 3t², 1⟩ and starts at r(0) = ⟨1, 2, 3⟩. Find r(t).</p>
+                    <p><strong>Problem:</strong> Find the speed of a particle with velocity v(t) = ⟨3, 4t, 0⟩ at t = 2.</p>
                     
-                    <p><strong>Step 1: Integrate velocity</strong></p>
+                    <p><strong>Step 1: Find the magnitude</strong></p>
                     <div class="math-display">
-                        r(t) = ∫v(t) dt = ⟨t² + C₁, t³ + C₂, t + C₃⟩
+                        |v(t)| = √[3² + (4t)² + 0²]<br>
+                        = √[9 + 16t²]
                     </div>
                     
-                    <p><strong>Step 2: Use initial condition</strong></p>
+                    <p><strong>Step 2: Evaluate at t = 2</strong></p>
                     <div class="math-display">
-                        r(0) = ⟨C₁, C₂, C₃⟩ = ⟨1, 2, 3⟩<br>
-                        C₁ = 1, C₂ = 2, C₃ = 3
-                    </div>
-                    
-                    <p><strong>Step 3: Write final answer</strong></p>
-                    <div class="math-display">
-                        r(t) = ⟨t² + 1, t³ + 2, t + 3⟩
+                        |v(2)| = √[9 + 16(4)] = √[9 + 64] = √73 ≈ 8.54
                     </div>
                 </div>
             </div>
@@ -180,24 +163,24 @@
             <div class="example-box">
                 <h4>Example 3: Projectile Motion</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> A ball is thrown with initial velocity 50 m/s at 30°. Find the position at t = 2 seconds (g = 9.8 m/s²).</p>
+                    <p><strong>Problem:</strong> A ball is thrown with initial velocity 20 m/s at 30°. Find the position at t = 2 seconds (g = 9.8 m/s²).</p>
                     
                     <p><strong>Step 1: Find initial velocity components</strong></p>
                     <div class="math-display">
-                        v₀ₓ = 50 cos(30°) = 50 · (√3/2) ≈ 43.3 m/s<br>
-                        v₀ᵧ = 50 sin(30°) = 50 · (1/2) = 25 m/s
+                        v₀ₓ = 20 cos(30°) = 20 · (√3/2) = 10√3 m/s<br>
+                        v₀ᵧ = 20 sin(30°) = 20 · (1/2) = 10 m/s
                     </div>
                     
                     <p><strong>Step 2: Write position equations</strong></p>
                     <div class="math-display">
-                        x(t) = 43.3t<br>
-                        y(t) = 25t - 4.9t²
+                        x(t) = 10√3 t<br>
+                        y(t) = 10t - (1/2)(9.8)t² = 10t - 4.9t²
                     </div>
                     
                     <p><strong>Step 3: Evaluate at t = 2</strong></p>
                     <div class="math-display">
-                        x(2) = 43.3 · 2 = 86.6 m<br>
-                        y(2) = 25 · 2 - 4.9 · 4 = 50 - 19.6 = 30.4 m
+                        x(2) = 10√3 · 2 = 20√3 ≈ 34.64 m<br>
+                        y(2) = 10(2) - 4.9(4) = 20 - 19.6 = 0.4 m
                     </div>
                 </div>
             </div>
@@ -208,24 +191,24 @@
             <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
             
             <div class="step-guide">
-                <h4>Step-by-Step: Finding Velocity and Acceleration</h4>
+                <h4>Step-by-Step: Analyzing Motion</h4>
                 <ol>
-                    <li><strong>Start with position</strong> — r(t) = ⟨x(t), y(t), z(t)⟩</li>
-                    <li><strong>Differentiate for velocity</strong> — v(t) = r'(t)</li>
-                    <li><strong>Differentiate again for acceleration</strong> — a(t) = v'(t)</li>
-                    <li><strong>Find speed if needed</strong> — |v(t)|</li>
+                    <li><strong>Find the position function</strong> — r(t) = ⟨x(t), y(t), z(t)⟩</li>
+                    <li><strong>Find velocity</strong> — v(t) = r'(t)</li>
+                    <li><strong>Find acceleration</strong> — a(t) = v'(t)</li>
+                    <li><strong>Find speed</strong> — |v(t)|</li>
                     <li><strong>Evaluate at specific times</strong> — Plug in t values</li>
                 </ol>
             </div>
 
             <div class="step-guide">
-                <h4>Step-by-Step: Finding Position from Velocity</h4>
+                <h4>Step-by-Step: Projectile Motion</h4>
                 <ol>
-                    <li><strong>Integrate velocity</strong> — r(t) = ∫v(t) dt</li>
-                    <li><strong>Add constants</strong> — Include C₁, C₂, C₃</li>
-                    <li><strong>Use initial condition</strong> — r(t₀) = given position</li>
-                    <li><strong>Solve for constants</strong> — Find C₁, C₂, C₃</li>
-                    <li><strong>Write final answer</strong> — r(t) with all constants determined</li>
+                    <li><strong>Find initial velocity components</strong> — v₀ₓ and v₀ᵧ</li>
+                    <li><strong>Write position equations</strong> — x(t) and y(t)</li>
+                    <li><strong>Find velocity</strong> — Differentiate position</li>
+                    <li><strong>Find maximum height</strong> — When vᵧ = 0</li>
+                    <li><strong>Find range</strong> — When y = 0 again</li>
                 </ol>
             </div>
         </section>
@@ -238,10 +221,10 @@
                 <h4>Test Your Understanding</h4>
                 <ul>
                     <li>What is the relationship between position, velocity, and acceleration?</li>
-                    <li>How do you find position from velocity?</li>
-                    <li>What is speed?</li>
-                    <li>Write the equations for projectile motion</li>
-                    <li>If v(t) = ⟨1, 2t⟩ and r(0) = ⟨0, 0⟩, find r(t)</li>
+                    <li>How do you find speed?</li>
+                    <li>What are the equations for projectile motion?</li>
+                    <li>Find the velocity of r(t) = ⟨t², t⟩ at t = 1</li>
+                    <li>What is the acceleration in uniform circular motion?</li>
                 </ul>
             </div>
         </section>

@@ -75,18 +75,6 @@
                 </div>
                 
                 <p>Where |r'(t)| is the magnitude of the derivative (the speed).</p>
-                
-                <div class="example-box">
-                    <h4>Example</h4>
-                    <div class="example-content">
-                        <p>For r(t) = ⟨t, t²⟩ from t = 0 to t = 1:</p>
-                        <div class="math-display">
-                            r'(t) = ⟨1, 2t⟩<br>
-                            |r'(t)| = √(1 + 4t²)<br>
-                            L = ∫₀¹ √(1 + 4t²) dt ≈ 1.479
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="content-block">
@@ -104,29 +92,15 @@
                 </div>
                 
                 <p>Where T(t) is the unit tangent vector.</p>
-                
-                <div class="example-box">
-                    <h4>What Curvature Means</h4>
-                    <div class="example-content">
-                        <ul>
-                            <li><strong>κ = 0:</strong> The curve is a straight line (no bending)</li>
-                            <li><strong>κ is constant:</strong> The curve is a circle</li>
-                            <li><strong>κ is large:</strong> The curve bends sharply</li>
-                            <li><strong>κ is small:</strong> The curve bends gently</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             <div class="content-block">
                 <h3>Unit Tangent Vector</h3>
-                <p>The unit tangent vector points in the direction of the curve:</p>
+                <p>The unit tangent vector points in the direction of motion:</p>
                 
                 <div class="math-display">
                     T(t) = r'(t) / |r'(t)|
                 </div>
-                
-                <p>It always has magnitude 1.</p>
             </div>
 
             <div class="content-block">
@@ -137,12 +111,12 @@
                     R = 1/κ
                 </div>
                 
-                <p>It represents the radius of the circle that best fits the curve at that point.</p>
+                <p>A smaller radius means a sharper bend.</p>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>Arc length and curvature are essential in physics (motion along curves), engineering (road design), and computer graphics (smooth curves). They help us understand how curves behave.</p>
+                <p>Arc length and curvature are essential for understanding motion, designing roads and roller coasters, and analyzing the geometry of curves.</p>
             </div>
         </section>
 
@@ -162,12 +136,14 @@
                     
                     <p><strong>Step 2: Find |r'(t)|</strong></p>
                     <div class="math-display">
-                        |r'(t)| = √(sin²(t) + cos²(t) + 1) = √(1 + 1) = √2
+                        |r'(t)| = √[(-sin(t))² + (cos(t))² + 1²]<br>
+                        = √[sin²(t) + cos²(t) + 1]<br>
+                        = √[1 + 1] = √2
                     </div>
                     
                     <p><strong>Step 3: Integrate</strong></p>
                     <div class="math-display">
-                        L = ∫₀²π √2 dt = √2 · 2π = 2π√2 ≈ 8.886
+                        L = ∫₀²π √2 dt = √2 · 2π = 2π√2
                     </div>
                 </div>
             </div>
@@ -175,17 +151,18 @@
             <div class="example-box">
                 <h4>Example 2: Finding Curvature</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find the curvature of r(t) = ⟨t, t²⟩ at t = 0</p>
+                    <p><strong>Problem:</strong> Find the curvature of r(t) = ⟨t, t², 0⟩ at t = 0</p>
                     
                     <p><strong>Step 1: Find r'(t) and r''(t)</strong></p>
                     <div class="math-display">
-                        r'(t) = ⟨1, 2t⟩<br>
-                        r''(t) = ⟨0, 2⟩
+                        r'(t) = ⟨1, 2t, 0⟩<br>
+                        r''(t) = ⟨0, 2, 0⟩
                     </div>
                     
                     <p><strong>Step 2: Find r'(t) × r''(t)</strong></p>
                     <div class="math-display">
-                        r'(t) × r''(t) = ⟨1, 2t, 0⟩ × ⟨0, 2, 0⟩ = ⟨0, 0, 2⟩
+                        r'(t) × r''(t) = ⟨1, 2t, 0⟩ × ⟨0, 2, 0⟩<br>
+                        = ⟨0, 0, 2⟩
                     </div>
                     
                     <p><strong>Step 3: Find |r'(t) × r''(t)|</strong></p>
@@ -209,21 +186,21 @@
             <div class="example-box">
                 <h4>Example 3: Finding the Unit Tangent Vector</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find T(t) for r(t) = ⟨t², t⟩</p>
+                    <p><strong>Problem:</strong> Find T(t) for r(t) = ⟨t, t²⟩</p>
                     
                     <p><strong>Step 1: Find r'(t)</strong></p>
                     <div class="math-display">
-                        r'(t) = ⟨2t, 1⟩
+                        r'(t) = ⟨1, 2t⟩
                     </div>
                     
                     <p><strong>Step 2: Find |r'(t)|</strong></p>
                     <div class="math-display">
-                        |r'(t)| = √(4t² + 1)
+                        |r'(t)| = √(1 + 4t²)
                     </div>
                     
                     <p><strong>Step 3: Find T(t)</strong></p>
                     <div class="math-display">
-                        T(t) = ⟨2t, 1⟩ / √(4t² + 1)
+                        T(t) = ⟨1, 2t⟩ / √(1 + 4t²)
                     </div>
                 </div>
             </div>
@@ -240,7 +217,6 @@
                     <li><strong>Find |r'(t)|</strong> — Compute the magnitude</li>
                     <li><strong>Set up the integral</strong> — L = ∫ₐᵇ |r'(t)| dt</li>
                     <li><strong>Evaluate</strong> — Compute the definite integral</li>
-                    <li><strong>State your answer</strong> — Include units if applicable</li>
                 </ol>
             </div>
 
@@ -265,9 +241,9 @@
                 <ul>
                     <li>What is the formula for arc length?</li>
                     <li>What is the formula for curvature?</li>
-                    <li>What does curvature measure?</li>
                     <li>What is the unit tangent vector?</li>
-                    <li>What is the curvature of a straight line?</li>
+                    <li>What does curvature measure?</li>
+                    <li>Find the arc length of r(t) = ⟨t, t⟩ from t = 0 to t = 1</li>
                 </ul>
             </div>
         </section>
@@ -278,7 +254,7 @@
             
             <div class="whats-next">
                 <h4>Continue Your Learning</h4>
-                <p>Now that you understand arc length and curvature, the next step is learning about <strong>motion in space</strong> — how to analyze velocity, acceleration, and motion along curves.</p>
+                <p>Now that you understand arc length and curvature, the next step is learning about <strong>motion in space</strong> — how to analyze velocity and acceleration in 3D.</p>
                 <a href="lesson4.html" class="next-lesson-link">
                     Next Lesson: Motion in Space →
                 </a>

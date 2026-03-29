@@ -71,10 +71,8 @@
                 <p>Remember the chain rule from single-variable calculus:</p>
                 
                 <div class="math-display">
-                    If y = f(g(x)), then dy/dx = f'(g(x)) · g'(x)
+                    d/dx[f(g(x))] = f'(g(x)) · g'(x)
                 </div>
-                
-                <p>We multiply the derivatives along the chain.</p>
             </div>
 
             <div class="content-block">
@@ -85,35 +83,17 @@
                     dz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)
                 </div>
                 
-                <p>We sum the products of partial derivatives and ordinary derivatives.</p>
-                
-                <div class="example-box">
-                    <h4>Example</h4>
-                    <div class="example-content">
-                        <p>If z = x²y where x = t² and y = t³:</p>
-                        <div class="math-display">
-                            ∂z/∂x = 2xy<br>
-                            ∂z/∂y = x²<br>
-                            dx/dt = 2t<br>
-                            dy/dt = 3t²<br>
-                            dz/dt = (2xy)(2t) + (x²)(3t²)<br>
-                            = 2(t²)(t³)(2t) + (t²)²(3t²)<br>
-                            = 4t⁶ + 3t⁶ = 7t⁶
-                        </div>
-                    </div>
-                </div>
+                <p>We multiply partial derivatives by ordinary derivatives and add them up.</p>
             </div>
 
             <div class="content-block">
-                <h3>The Chain Rule for Multiple Paths</h3>
+                <h3>The Chain Rule for Partial Derivatives</h3>
                 <p>If z = f(x, y) where x = g(s, t) and y = h(s, t), then:</p>
                 
                 <div class="math-display">
                     ∂z/∂s = (∂f/∂x)(∂x/∂s) + (∂f/∂y)(∂y/∂s)<br>
                     ∂z/∂t = (∂f/∂x)(∂x/∂t) + (∂f/∂y)(∂y/∂t)
                 </div>
-                
-                <p>We have two chain rules, one for each independent variable.</p>
             </div>
 
             <div class="content-block">
@@ -121,24 +101,24 @@
                 <p>A tree diagram helps visualize the chain rule:</p>
                 
                 <div class="example-box">
-                    <h4>Example Tree</h4>
+                    <h4>Example</h4>
                     <div class="example-content">
-                        <p>For z = f(x, y) where x = g(s, t) and y = h(s, t):</p>
+                        <p>For z = f(x, y) where x = g(t) and y = h(t):</p>
                         <div class="math-display">
                             z<br>
                             / \<br>
                             x   y<br>
-                            / \ / \<br>
-                            s  t s  t
+                            |   |<br>
+                            t   t
                         </div>
-                        <p>Each path from z to s gives a term in ∂z/∂s.</p>
+                        <p>Each path from z to t gives a term in dz/dt.</p>
                     </div>
                 </div>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>The chain rule is essential for implicit differentiation, related rates, and understanding how changes propagate through complex systems. It's used throughout physics and engineering.</p>
+                <p>The chain rule is essential for implicit differentiation, related rates, and understanding how changes propagate through complex systems.</p>
             </div>
         </section>
 
@@ -163,7 +143,7 @@
                         dy/dt = cos(t)
                     </div>
                     
-                    <p><strong>Step 3: Apply chain rule</strong></p>
+                    <p><strong>Step 3: Apply the chain rule</strong></p>
                     <div class="math-display">
                         dz/dt = (2xy)(-sin(t)) + (x²)(cos(t))<br>
                         = 2cos(t)sin(t)(-sin(t)) + cos²(t)cos(t)<br>
@@ -175,30 +155,26 @@
             <div class="example-box">
                 <h4>Example 2: Chain Rule with Two Parameters</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find ∂z/∂s and ∂z/∂t for z = eˣʸ where x = s + t and y = s - t</p>
+                    <p><strong>Problem:</strong> Find ∂z/∂s and ∂z/∂t for z = x² + y² where x = s + t and y = s - t</p>
                     
                     <p><strong>Step 1: Find partial derivatives</strong></p>
                     <div class="math-display">
-                        ∂z/∂x = yeˣʸ<br>
-                        ∂z/∂y = xeˣʸ
-                    </div>
-                    
-                    <p><strong>Step 2: Find partial derivatives of x and y</strong></p>
-                    <div class="math-display">
+                        ∂z/∂x = 2x<br>
+                        ∂z/∂y = 2y<br>
                         ∂x/∂s = 1, ∂x/∂t = 1<br>
                         ∂y/∂s = 1, ∂y/∂t = -1
                     </div>
                     
-                    <p><strong>Step 3: Apply chain rule for s</strong></p>
+                    <p><strong>Step 2: Apply the chain rule</strong></p>
                     <div class="math-display">
-                        ∂z/∂s = (yeˣʸ)(1) + (xeˣʸ)(1) = (x + y)eˣʸ<br>
-                        = (s + t + s - t)e⁽ˢ⁺ᵗ⁾⁽ˢ⁻ᵗ⁾ = 2seˢ²⁻ᵗ²
+                        ∂z/∂s = (2x)(1) + (2y)(1) = 2x + 2y<br>
+                        ∂z/∂t = (2x)(1) + (2y)(-1) = 2x - 2y
                     </div>
                     
-                    <p><strong>Step 4: Apply chain rule for t</strong></p>
+                    <p><strong>Step 3: Substitute</strong></p>
                     <div class="math-display">
-                        ∂z/∂t = (yeˣʸ)(1) + (xeˣʸ)(-1) = (y - x)eˣʸ<br>
-                        = (s - t - s - t)e⁽ˢ⁺ᵗ⁾⁽ˢ⁻ᵗ⁾ = -2teˢ²⁻ᵗ²
+                        ∂z/∂s = 2(s+t) + 2(s-t) = 4s<br>
+                        ∂z/∂t = 2(s+t) - 2(s-t) = 4t
                     </div>
                 </div>
             </div>
@@ -234,8 +210,7 @@
                     <li><strong>Find partial derivatives</strong> — Compute ∂f/∂x, ∂f/∂y, etc.</li>
                     <li><strong>Find derivatives of inner functions</strong> — Compute dx/dt, dy/dt, etc.</li>
                     <li><strong>Multiply along paths</strong> — For each path from outer to inner</li>
-                    <li><strong>Add the products</strong> — Sum all the path products</li>
-                    <li><strong>Simplify</strong> — Substitute and combine terms</li>
+                    <li><strong>Add the products</strong> — Sum all the terms</li>
                 </ol>
             </div>
 
@@ -243,7 +218,7 @@
                 <h4>Step-by-Step: Implicit Differentiation</h4>
                 <ol>
                     <li><strong>Write the equation</strong> — F(x, y) = 0</li>
-                    <li><strong>Differentiate both sides</strong> — Use chain rule</li>
+                    <li><strong>Differentiate both sides</strong> — Use the chain rule</li>
                     <li><strong>Solve for dy/dx</strong> — Isolate the derivative</li>
                     <li><strong>Simplify</strong> — Express in simplest form</li>
                 </ol>
@@ -259,8 +234,8 @@
                 <ul>
                     <li>What is the chain rule for partial derivatives?</li>
                     <li>How do you use a tree diagram?</li>
-                    <li>Find dz/dt for z = x² where x = t³</li>
                     <li>What is implicit differentiation?</li>
+                    <li>Find dz/dt for z = x² where x = t³</li>
                     <li>How many terms are in the chain rule for z = f(x, y) where x = g(s, t)?</li>
                 </ul>
             </div>
