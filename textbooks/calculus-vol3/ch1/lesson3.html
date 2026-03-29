@@ -46,7 +46,7 @@
             <div class="lesson-meta">
                 <span>Chapter 1: Vectors and the Geometry of Space</span>
                 <span>Lesson 3 of 6</span>
-                <span>⏱️ 30-40 minutes</span>
+                <span>⏱️ 35-45 minutes</span>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
             </div>
             
             <div class="one-sentence">
-                <strong>In one sentence:</strong> The dot product is a way to multiply two vectors that gives a scalar (number) and measures how much they point in the same direction.
+                <strong>In one sentence:</strong> The dot product measures how much two vectors point in the same direction.
             </div>
         </section>
 
@@ -68,82 +68,54 @@
             
             <div class="content-block">
                 <h3>What is the Dot Product?</h3>
-                <p>The <strong>dot product</strong> (also called the scalar product) of two vectors is a number, not a vector.</p>
+                <p>The <strong>dot product</strong> of two vectors is a scalar (a number) that measures their alignment.</p>
                 
                 <div class="math-display">
-                    If a = ⟨a₁, a₂, a₃⟩ and b = ⟨b₁, b₂, b₃⟩, then:<br>
-                    a · b = a₁b₁ + a₂b₂ + a₃b₃
+                    u · v = u₁v₁ + u₂v₂ + u₃v₃
                 </div>
                 
-                <div class="example-box">
-                    <h4>Example</h4>
-                    <div class="example-content">
-                        <p>If a = ⟨1, 2, 3⟩ and b = ⟨4, 5, 6⟩:</p>
-                        <div class="math-display">
-                            a · b = (1)(4) + (2)(5) + (3)(6) = 4 + 10 + 18 = 32
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Geometric Interpretation</h3>
-                <p>The dot product has a beautiful geometric meaning:</p>
+                <p>Or equivalently:</p>
                 
                 <div class="math-display">
-                    a · b = |a| |b| cos(θ)
+                    u · v = |u||v|cos(θ)
                 </div>
                 
-                <p>Where θ is the angle between the two vectors.</p>
-                
-                <div class="example-box">
-                    <h4>What This Means</h4>
-                    <div class="example-content">
-                        <ul>
-                            <li>If θ = 0° (vectors point the same way): a · b = |a| |b| (maximum)</li>
-                            <li>If θ = 90° (vectors are perpendicular): a · b = 0</li>
-                            <li>If θ = 180° (vectors point opposite ways): a · b = -|a| |b| (minimum)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Finding the Angle Between Vectors</h3>
-                <p>We can rearrange the formula to find the angle:</p>
-                
-                <div class="math-display">
-                    cos(θ) = (a · b) / (|a| |b|)
-                </div>
-                
-                <div class="example-box">
-                    <h4>Example: Finding the Angle</h4>
-                    <div class="example-content">
-                        <p>Find the angle between a = ⟨1, 0⟩ and b = ⟨1, 1⟩</p>
-                        <div class="math-display">
-                            a · b = (1)(1) + (0)(1) = 1<br>
-                            |a| = √(1² + 0²) = 1<br>
-                            |b| = √(1² + 1²) = √2<br>
-                            cos(θ) = 1 / (1 · √2) = 1/√2<br>
-                            θ = 45°
-                        </div>
-                    </div>
-                </div>
+                <p>Where θ is the angle between the vectors.</p>
             </div>
 
             <div class="content-block">
                 <h3>Properties of the Dot Product</h3>
                 <ul>
-                    <li><strong>Commutative:</strong> a · b = b · a</li>
-                    <li><strong>Distributive:</strong> a · (b + c) = a · b + a · c</li>
-                    <li><strong>Scalar multiplication:</strong> (ca) · b = c(a · b)</li>
-                    <li><strong>Perpendicular test:</strong> a · b = 0 if and only if a ⊥ b</li>
+                    <li><strong>Commutative:</strong> u · v = v · u</li>
+                    <li><strong>Distributive:</strong> u · (v + w) = u · v + u · w</li>
+                    <li><strong>Scalar multiplication:</strong> (cu) · v = c(u · v)</li>
+                    <li><strong>Perpendicular vectors:</strong> u · v = 0 if and only if u ⊥ v</li>
                 </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Finding the Angle Between Vectors</h3>
+                <p>We can rearrange the dot product formula to find the angle:</p>
+                
+                <div class="math-display">
+                    cos(θ) = (u · v) / (|u||v|)
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Projection</h3>
+                <p>The <strong>projection</strong> of u onto v is:</p>
+                
+                <div class="math-display">
+                    projᵥ u = ((u · v) / |v|²) v
+                </div>
+                
+                <p>This gives the component of u in the direction of v.</p>
             </div>
 
             <div class="why-box">
                 <h4>Why This Matters</h4>
-                <p>The dot product is essential in physics (work, flux), computer graphics (lighting, projections), and machine learning (similarity measures). It's one of the most useful operations in mathematics.</p>
+                <p>The dot product is used everywhere in physics and engineering to calculate work, find angles, project vectors, and determine if vectors are perpendicular.</p>
             </div>
         </section>
 
@@ -154,63 +126,68 @@
             <div class="example-box">
                 <h4>Example 1: Computing the Dot Product</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find a · b for a = ⟨2, -1, 3⟩ and b = ⟨4, 0, -2⟩</p>
+                    <p><strong>Problem:</strong> Find u · v for u = ⟨1, 2, 3⟩ and v = ⟨4, -1, 2⟩</p>
                     
                     <p><strong>Step 1: Multiply corresponding components</strong></p>
                     <div class="math-display">
-                        a · b = (2)(4) + (-1)(0) + (3)(-2)
+                        u · v = (1)(4) + (2)(-1) + (3)(2)
                     </div>
                     
                     <p><strong>Step 2: Simplify</strong></p>
                     <div class="math-display">
-                        a · b = 8 + 0 - 6 = 2
+                        u · v = 4 - 2 + 6 = 8
                     </div>
-                    
-                    <p><strong>Step 3: Interpret</strong></p>
-                    <p>The dot product is 2, which is positive, so the angle between them is less than 90°.</p>
                 </div>
             </div>
 
             <div class="example-box">
-                <h4>Example 2: Finding the Angle</h4>
+                <h4>Example 2: Finding the Angle Between Vectors</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Find the angle between a = ⟨1, 1, 0⟩ and b = ⟨0, 1, 1⟩</p>
+                    <p><strong>Problem:</strong> Find the angle between u = ⟨1, 0, 0⟩ and v = ⟨0, 1, 0⟩</p>
                     
-                    <p><strong>Step 1: Compute the dot product</strong></p>
+                    <p><strong>Step 1: Find the dot product</strong></p>
                     <div class="math-display">
-                        a · b = (1)(0) + (1)(1) + (0)(1) = 1
+                        u · v = (1)(0) + (0)(1) + (0)(0) = 0
                     </div>
                     
                     <p><strong>Step 2: Find the magnitudes</strong></p>
                     <div class="math-display">
-                        |a| = √(1² + 1² + 0²) = √2<br>
-                        |b| = √(0² + 1² + 1²) = √2
+                        |u| = √(1² + 0² + 0²) = 1<br>
+                        |v| = √(0² + 1² + 0²) = 1
                     </div>
                     
                     <p><strong>Step 3: Find cos(θ)</strong></p>
                     <div class="math-display">
-                        cos(θ) = 1 / (√2 · √2) = 1/2
+                        cos(θ) = 0 / (1·1) = 0
                     </div>
                     
                     <p><strong>Step 4: Find θ</strong></p>
                     <div class="math-display">
-                        θ = 60°
+                        θ = 90°
                     </div>
+                    <p>The vectors are perpendicular!</p>
                 </div>
             </div>
 
             <div class="example-box">
-                <h4>Example 3: Checking Perpendicularity</h4>
+                <h4>Example 3: Finding the Projection</h4>
                 <div class="example-content">
-                    <p><strong>Problem:</strong> Are a = ⟨1, 2, 3⟩ and b = ⟨2, -1, 0⟩ perpendicular?</p>
+                    <p><strong>Problem:</strong> Find the projection of u = ⟨3, 4⟩ onto v = ⟨1, 0⟩</p>
                     
-                    <p><strong>Step 1: Compute the dot product</strong></p>
+                    <p><strong>Step 1: Find u · v</strong></p>
                     <div class="math-display">
-                        a · b = (1)(2) + (2)(-1) + (3)(0) = 2 - 2 + 0 = 0
+                        u · v = (3)(1) + (4)(0) = 3
                     </div>
                     
-                    <p><strong>Step 2: Interpret</strong></p>
-                    <p>Since a · b = 0, the vectors are perpendicular (orthogonal).</p>
+                    <p><strong>Step 2: Find |v|²</strong></p>
+                    <div class="math-display">
+                        |v|² = 1² + 0² = 1
+                    </div>
+                    
+                    <p><strong>Step 3: Find the projection</strong></p>
+                    <div class="math-display">
+                        projᵥ u = (3/1)⟨1, 0⟩ = ⟨3, 0⟩
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,20 +199,18 @@
             <div class="step-guide">
                 <h4>Step-by-Step: Computing the Dot Product</h4>
                 <ol>
-                    <li><strong>Write the vectors</strong> — Make sure they have the same number of components</li>
-                    <li><strong>Multiply corresponding components</strong> — a₁b₁, a₂b₂, a₃b₃</li>
-                    <li><strong>Add the products</strong> — Sum all the products</li>
+                    <li><strong>Multiply corresponding components</strong> — u₁v₁, u₂v₂, u₃v₃</li>
+                    <li><strong>Add the products</strong> — u₁v₁ + u₂v₂ + u₃v₃</li>
                     <li><strong>Simplify</strong> — Get your final answer</li>
                 </ol>
             </div>
 
             <div class="step-guide">
-                <h4>Step-by-Step: Finding the Angle Between Vectors</h4>
+                <h4>Step-by-Step: Finding the Angle</h4>
                 <ol>
-                    <li><strong>Compute a · b</strong> — Use the dot product formula</li>
-                    <li><strong>Find |a|</strong> — Compute the magnitude of a</li>
-                    <li><strong>Find |b|</strong> — Compute the magnitude of b</li>
-                    <li><strong>Compute cos(θ)</strong> — Use cos(θ) = (a · b) / (|a| |b|)</li>
+                    <li><strong>Find u · v</strong> — Use the dot product formula</li>
+                    <li><strong>Find |u| and |v|</strong> — Compute the magnitudes</li>
+                    <li><strong>Find cos(θ)</strong> — Use cos(θ) = (u · v) / (|u||v|)</li>
                     <li><strong>Find θ</strong> — Take the inverse cosine</li>
                 </ol>
             </div>
@@ -248,11 +223,11 @@
             <div class="check-yourself">
                 <h4>Test Your Understanding</h4>
                 <ul>
-                    <li>What is the dot product of ⟨1, 2⟩ and ⟨3, 4⟩?</li>
-                    <li>If a · b = 0, what does that mean geometrically?</li>
+                    <li>What is the dot product formula?</li>
+                    <li>When is u · v = 0?</li>
                     <li>How do you find the angle between two vectors?</li>
-                    <li>Is the dot product commutative?</li>
-                    <li>What is the dot product of a vector with itself?</li>
+                    <li>What is a projection?</li>
+                    <li>Find the dot product of ⟨1, 2⟩ and ⟨3, 4⟩</li>
                 </ul>
             </div>
         </section>
