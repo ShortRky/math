@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration by Substitution - Calculus Volume 1 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 1</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 5: Integration by Substitution</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Integration by Substitution</h1>
+            <div class="lesson-meta">
+                <span>Chapter 5: Integration</span>
+                <span>Lesson 5 of 7</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn the substitution method for evaluating integrals.</p>
+            </div>
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Substitution reverses the chain rule to simplify integrals.
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            <div class="content-block">
+                <h3>What Is Substitution?</h3>
+                <p>If you have ∫f(g(x))·g'(x)dx, let u = g(x), then du = g'(x)dx</p>
+                <div class="math-display">
+                    ∫f(g(x))·g'(x)dx = ∫f(u)du
+                </div>
+            </div>
+            <div class="content-block">
+                <h3>When to Use It</h3>
+                <p>Use substitution when you see:</p>
+                <ul>
+                    <li>A function and its derivative</li>
+                    <li>A composite function</li>
+                    <li>A complicated expression that can be simplified</li>
+                </ul>
+            </div>
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Substitution is one of the most powerful integration techniques. It's the reverse of the chain rule.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            <div class="example-box">
+                <h4>Example: Find ∫2x·cos(x²)dx</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Choose u</strong></p>
+                    <p>Let u = x², then du = 2xdx</p>
+                    <p><strong>Step 2: Substitute</strong></p>
+                    <div class="math-display">
+                        ∫2x·cos(x²)dx = ∫cos(u)du
+                    </div>
+                    <p><strong>Step 3: Integrate</strong></p>
+                    <div class="math-display">
+                        = sin(u) + C = sin(x²) + C
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            <div class="step-guide">
+                <h4>Step-by-Step: Integration by Substitution</h4>
+                <ol>
+                    <li><strong>Choose u</strong> — Pick the inner function</li>
+                    <li><strong>Find du</strong> — Differentiate u</li>
+                    <li><strong>Substitute</strong> — Replace in the integral</li>
+                    <li><strong>Integrate</strong> — Find the antiderivative</li>
+                    <li><strong>Substitute back</strong> — Replace u with original</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What is substitution?</li>
+                    <li>When do you use it?</li>
+                    <li>Find ∫3x²·(x³+1)⁵dx</li>
+                    <li>What's the connection to the chain rule?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand substitution, the next step is learning about <strong>area between curves</strong>.</p>
+                <a href="lesson6.html" class="next-lesson-link">
+                    Next Lesson: Area Between Curves →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

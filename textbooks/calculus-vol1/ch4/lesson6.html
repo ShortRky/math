@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimization Problems - Calculus Volume 1 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 1</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 6: Optimization Problems</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Optimization Problems</h1>
+            <div class="lesson-meta">
+                <span>Chapter 4: Applications of Derivatives</span>
+                <span>Lesson 6 of 6</span>
+                <span>⏱️ 40-50 minutes</span>
+            </div>
+        </div>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to use calculus to find maximum or minimum values in real-world problems.</p>
+            </div>
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Optimization uses derivatives to find the best possible solution to a problem.
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            <div class="content-block">
+                <h3>What Is Optimization?</h3>
+                <p>Optimization means finding the maximum or minimum value of a quantity, subject to constraints.</p>
+                <p>Examples:</p>
+                <ul>
+                    <li>Maximize area with fixed perimeter</li>
+                    <li>Minimize cost of materials</li>
+                    <li>Maximize profit</li>
+                    <li>Minimize travel time</li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h3>The Process</h3>
+                <ol>
+                    <li>Draw a diagram</li>
+                    <li>Define variables</li>
+                    <li>Write an equation for what you're optimizing</li>
+                    <li>Use constraints to reduce to one variable</li>
+                    <li>Find critical points</li>
+                    <li>Check for maximum or minimum</li>
+                </ol>
+            </div>
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Optimization is used everywhere — engineering design, business decisions, resource allocation, and scientific research.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            <div class="example-box">
+                <h4>Example: Find the rectangle with maximum area and perimeter 20</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Define variables</strong></p>
+                    <p>Let x = length, y = width</p>
+                    <p><strong>Step 2: Write equations</strong></p>
+                    <p>Perimeter: 2x + 2y = 20, so y = 10 - x</p>
+                    <p>Area: A = x·y = x(10-x) = 10x - x²</p>
+                    <p><strong>Step 3: Find critical points</strong></p>
+                    <div class="math-display">
+                        A'(x) = 10 - 2x = 0, so x = 5
+                    </div>
+                    <p><strong>Step 4: Check</strong></p>
+                    <p>A''(x) = -2 < 0, so x = 5 is a maximum</p>
+                    <p>Maximum area = 5·5 = 25</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            <div class="step-guide">
+                <h4>Step-by-Step: Solving Optimization Problems</h4>
+                <ol>
+                    <li><strong>Read carefully</strong> — What are you optimizing?</li>
+                    <li><strong>Draw a diagram</strong> — Visualize the situation</li>
+                    <li><strong>Define variables</strong> — What can change?</li>
+                    <li><strong>Write equations</strong> — Objective function and constraints</li>
+                    <li><strong>Reduce to one variable</strong> — Use constraints</li>
+                    <li><strong>Find critical points</strong> — Set derivative to zero</li>
+                    <li><strong>Check</strong> — Is it a max or min?</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What is optimization?</li>
+                    <li>What are the steps for solving optimization problems?</li>
+                    <li>Why do you need to check if it's a max or min?</li>
+                    <li>Find two numbers that add to 10 with maximum product</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand applications of derivatives, the next step is learning about <strong>integration</strong>.</p>
+                <a href="../ch5/lesson1.html" class="next-lesson-link">
+                    Next Chapter: Integration →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

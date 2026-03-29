@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Substitution - Calculus Volume 2 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 2</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 3: Trigonometric Substitution</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">Trigonometric Substitution</h1>
+            <div class="lesson-meta">
+                <span>Chapter 1: Integration Techniques</span>
+                <span>Lesson 3 of 6</span>
+                <span>⏱️ 35-45 minutes</span>
+            </div>
+        </div>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Learn how to use trigonometric substitution to evaluate integrals involving square roots.</p>
+            </div>
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> Trigonometric substitution uses trig identities to simplify integrals with square roots of quadratic expressions.
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            <div class="content-block">
+                <h3>When to Use Trigonometric Substitution</h3>
+                <p>Use when you see:</p>
+                <ul>
+                    <li>√(a² - x²) — use x = a·sin(θ)</li>
+                    <li>√(a² + x²) — use x = a·tan(θ)</li>
+                    <li>√(x² - a²) — use x = a·sec(θ)</li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h3>Why It Works</h3>
+                <p>Trigonometric identities simplify the square roots:</p>
+                <div class="math-display">
+                    1 - sin²(θ) = cos²(θ)<br>
+                    1 + tan²(θ) = sec²(θ)<br>
+                    sec²(θ) - 1 = tan²(θ)
+                </div>
+            </div>
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>Trigonometric substitution is essential for integrals that appear in physics and engineering, especially those involving circular or elliptical motion.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            <div class="example-box">
+                <h4>Example: Find ∫√(4 - x²)dx</h4>
+                <div class="example-content">
+                    <p><strong>Step 1: Choose substitution</strong></p>
+                    <p>Let x = 2·sin(θ), then dx = 2·cos(θ)dθ</p>
+                    <p><strong>Step 2: Simplify</strong></p>
+                    <div class="math-display">
+                        √(4 - x²) = √(4 - 4sin²(θ)) = 2cos(θ)
+                    </div>
+                    <p><strong>Step 3: Integrate</strong></p>
+                    <div class="math-display">
+                        ∫2cos(θ)·2cos(θ)dθ = 4∫cos²(θ)dθ = 2θ + sin(2θ) + C
+                    </div>
+                    <p><strong>Step 4: Substitute back</strong></p>
+                    <p>θ = arcsin(x/2), so answer involves arcsin(x/2)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            <div class="step-guide">
+                <h4>Step-by-Step: Trigonometric Substitution</h4>
+                <ol>
+                    <li><strong>Identify the form</strong> — Which square root do you have?</li>
+                    <li><strong>Choose substitution</strong> — sin, tan, or sec</li>
+                    <li><strong>Find dx</strong> — Differentiate your substitution</li>
+                    <li><strong>Simplify</strong> — Use trig identities</li>
+                    <li><strong>Integrate</strong> — Evaluate the trig integral</li>
+                    <li><strong>Substitute back</strong> — Return to original variable</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>When do you use x = a·sin(θ)?</li>
+                    <li>What identity helps with √(a² + x²)?</li>
+                    <li>Find ∫1/√(9 - x²)dx</li>
+                    <li>Why do we need to substitute back?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand trigonometric substitution, the next step is learning about <strong>partial fractions</strong>.</p>
+                <a href="lesson4.html" class="next-lesson-link">
+                    Next Lesson: Partial Fractions →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

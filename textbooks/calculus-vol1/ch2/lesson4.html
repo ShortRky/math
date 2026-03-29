@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Sided Limits - Calculus Volume 1 - MathLearn</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <span class="logo-icon">∑</span>
+                <span class="logo-text">MathLearn</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../../index.html#textbooks">Textbooks</a>
+                <a href="../../../index.html#about">About</a>
+                <a href="../../../index.html#how-to-use">How to Use</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../../../index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Calculus Volume 1</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Lesson 4: One-Sided Limits</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1 class="lesson-title">One-Sided Limits</h1>
+            <div class="lesson-meta">
+                <span>Chapter 2: Limits and Continuity</span>
+                <span>Lesson 4 of 6</span>
+                <span>⏱️ 25-35 minutes</span>
+            </div>
+        </div>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">🎯</span> Goal</h2>
+            <div class="goal-box">
+                <p>Understand left-hand and right-hand limits and how they relate to two-sided limits.</p>
+            </div>
+            <div class="one-sentence">
+                <strong>In one sentence:</strong> One-sided limits look at what happens as you approach from only one direction.
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">💡</span> The Idea</h2>
+            <div class="content-block">
+                <h3>Left-Hand and Right-Hand Limits</h3>
+                <div class="example-box">
+                    <h4>Left-Hand Limit</h4>
+                    <div class="example-content">
+                        <p>lim(x→a⁻) f(x) = L</p>
+                        <p>"The limit as x approaches a from the left"</p>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <h4>Right-Hand Limit</h4>
+                    <div class="example-content">
+                        <p>lim(x→a⁺) f(x) = L</p>
+                        <p>"The limit as x approaches a from the right"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <h3>When Does a Two-Sided Limit Exist?</h3>
+                <p>lim(x→a) f(x) exists if and only if:</p>
+                <div class="math-display">
+                    lim(x→a⁻) f(x) = lim(x→a⁺) f(x)
+                </div>
+            </div>
+            <div class="why-box">
+                <h4>Why This Matters</h4>
+                <p>One-sided limits help us understand piecewise functions and functions with jumps or breaks.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📝</span> Example</h2>
+            <div class="example-box">
+                <h4>Example: f(x) = {x if x < 2, x+1 if x ≥ 2}</h4>
+                <div class="example-content">
+                    <p><strong>Find lim(x→2) f(x)</strong></p>
+                    <p><strong>Step 1: Left-hand limit</strong></p>
+                    <div class="math-display">
+                        lim(x→2⁻) f(x) = lim(x→2⁻) x = 2
+                    </div>
+                    <p><strong>Step 2: Right-hand limit</strong></p>
+                    <div class="math-display">
+                        lim(x→2⁺) f(x) = lim(x→2⁺) (x+1) = 3
+                    </div>
+                    <p><strong>Step 3: Compare</strong></p>
+                    <p>2 ≠ 3, so lim(x→2) f(x) does not exist</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">📋</span> How to Solve Most Questions</h2>
+            <div class="step-guide">
+                <h4>Step-by-Step: Finding One-Sided Limits</h4>
+                <ol>
+                    <li><strong>Identify which side</strong> — Are you approaching from left or right?</li>
+                    <li><strong>Use the correct formula</strong> — Which piece of the function applies?</li>
+                    <li><strong>Evaluate</strong> — Find the limit using that formula</li>
+                    <li><strong>Check both sides</strong> — For two-sided limits, compare left and right</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">✅</span> Check Yourself</h2>
+            <div class="check-yourself">
+                <h4>Test Your Understanding</h4>
+                <ul>
+                    <li>What's the difference between lim(x→a⁻) and lim(x→a⁺)?</li>
+                    <li>When does a two-sided limit exist?</li>
+                    <li>Find lim(x→0⁻) (1/x)</li>
+                    <li>Find lim(x→0⁺) (1/x)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2><span class="section-icon">➡️</span> What's Next</h2>
+            <div class="whats-next">
+                <h4>Continue Your Learning</h4>
+                <p>Now that you understand one-sided limits, the next step is learning about <strong>continuity</strong>.</p>
+                <a href="lesson5.html" class="next-lesson-link">
+                    Next Lesson: Continuity →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 MathLearn. Making mathematics accessible to everyone.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>
