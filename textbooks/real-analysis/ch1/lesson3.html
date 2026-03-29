@@ -96,6 +96,52 @@
                     <li>sup(S) may not be in S (e.g., sup{1, 1/2, 1/3, ...} = 1, but 1 is in S)</li>
                     <li>inf(S) may not be in S (e.g., inf{1, 1/2, 1/3, ...} = 0, but 0 is not in S)</li>
                 </ul>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <svg width="500" height="200" viewBox="0 0 500 200">
+                        <!-- Number line -->
+                        <line x1="50" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2"/>
+                        
+                        <!-- Set S = (0, 5) -->
+                        <circle cx="100" cy="100" r="5" fill="#1976d2"/>
+                        <circle cx="150" cy="100" r="5" fill="#1976d2"/>
+                        <circle cx="200" cy="100" r="5" fill="#1976d2"/>
+                        <circle cx="250" cy="100" r="5" fill="#1976d2"/>
+                        <circle cx="300" cy="100" r="5" fill="#1976d2"/>
+                        <circle cx="350" cy="100" r="5" fill="#1976d2"/>
+                        <circle cx="400" cy="100" r="5" fill="#1976d2"/>
+                        
+                        <!-- Open circles at endpoints -->
+                        <circle cx="100" cy="100" r="8" fill="none" stroke="#1976d2" stroke-width="2"/>
+                        <circle cx="400" cy="100" r="8" fill="none" stroke="#1976d2" stroke-width="2"/>
+                        
+                        <!-- Labels -->
+                        <text x="100" y="130" text-anchor="middle" font-size="12" fill="#1976d2">0</text>
+                        <text x="400" y="130" text-anchor="middle" font-size="12" fill="#1976d2">5</text>
+                        
+                        <!-- Infimum arrow -->
+                        <path d="M 100 80 L 100 60" stroke="#388e3c" stroke-width="2" marker-end="url(#arrowhead3)"/>
+                        <text x="100" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#388e3c">inf(S) = 0</text>
+                        <text x="100" y="35" text-anchor="middle" font-size="10" fill="#388e3c">(not in S)</text>
+                        
+                        <!-- Supremum arrow -->
+                        <path d="M 400 80 L 400 60" stroke="#c2185b" stroke-width="2" marker-end="url(#arrowhead4)"/>
+                        <text x="400" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#c2185b">sup(S) = 5</text>
+                        <text x="400" y="35" text-anchor="middle" font-size="10" fill="#c2185b">(not in S)</text>
+                        
+                        <!-- Set label -->
+                        <text x="250" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">S = (0, 5)</text>
+                        
+                        <defs>
+                            <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#388e3c"/>
+                            </marker>
+                            <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#c2185b"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
             </div>
 
             <div class="why-box">
